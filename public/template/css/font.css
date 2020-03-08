@@ -1,0 +1,98 @@
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 900;
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_Black.eot);
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_Black.eot?#iefix) format("embedded-opentype"), url(../fonts/iransans/woff2/IRANSansWebFaNum_Black.woff2) format("woff2"), url(../fonts/iransans/woff/IRANSansWebFaNum_Black.woff) format("woff"), url(../fonts/iransans/ttf/IRANSansWebFaNum_Black.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_Bold.eot);
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/iransans/woff2/IRANSansWebFaNum_Bold.woff2) format("woff2"), url(../fonts/iransans/woff/IRANSansWebFaNum_Bold.woff) format("woff"), url(../fonts/iransans/ttf/IRANSansWebFaNum_Bold.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_Medium.eot);
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/iransans/woff2/IRANSansWebFaNum_Medium.woff2) format("woff2"), url(../fonts/iransans/woff/IRANSansWebFaNum_Medium.woff) format("woff"), url(../fonts/iransans/ttf/IRANSansWebFaNum_Medium.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_Light.eot);
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_Light.eot?#iefix) format("embedded-opentype"), url(../fonts/iransans/woff2/IRANSansWebFaNum_Light.woff2) format("woff2"), url(../fonts/iransans/woff/IRANSansWebFaNum_Light.woff) format("woff"), url(../fonts/iransans/ttf/IRANSansWebFaNum_Light.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 200;
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_UltraLight.eot);
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum_UltraLight.eot?#iefix) format("embedded-opentype"), url(../fonts/iransans/woff2/IRANSansWebFaNum_UltraLight.woff2) format("woff2"), url(../fonts/iransans/woff/IRANSansWebFaNum_UltraLight.woff) format("woff"), url(../fonts/iransans/ttf/IRANSansWebFaNum_UltraLight.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum.eot);
+    src: url(../fonts/iransans/eot/IRANSansWebFaNum.eot?#iefix) format("embedded-opentype"), url(../fonts/iransans/woff2/IRANSansWebFaNum.woff2) format("woff2"), url(../fonts/iransans/woff/IRANSansWebFaNum.woff) format("woff"), url(../fonts/iransans/ttf/IRANSansWebFaNum.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/yekanbakh/eot/YekanBakh-Medium.eot);
+    src: url(../fonts/yekanbakh/eot/YekanBakh-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/iransans/woff2/IRANSansWebFaNum.woff2) format("woff2"), url(../fonts/yekanbakh/woff/YekanBakh-Medium.woff) format("woff"), url(../fonts/yekanbakh/ttf/YekanBakh-Medium.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: IranYekan;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/iranyekan/eot/iranyekanwebmediumfanum.eot);
+    src: url(../fonts/iranyekan/eot/iranyekanwebmediumfanum.eot?#iefix) format("embedded-opentype"), url(../fonts/iranyekan/woff/iranyekanwebmediumfanum.woff) format("woff"), url(../fonts/iranyekan/ttf/iranyekanwebmediumfanum.ttf) format("truetype")
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: IRANSans !important;
+}
+
+.text-yekanbakh {
+    font-family: yekanbakh !important
+}
+
+.text-iranyekan {
+    font-family: IranYekan !important
+}
+
+.text-bold-1 {
+    font-weight: 200 !important
+}
+
+.text-bold-2 {
+    font-weight: 400 !important
+}
+
+.text-bold-3 {
+    font-weight: 600 !important
+}
+
+.text-bold-4 {
+    font-weight: 700 !important
+}
+
+.text-bold-5 {
+    font-weight: 800 !important
+}
+.active{
+    text-decoration: none!important;
+}

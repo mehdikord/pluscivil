@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware'=>['web']],function (){
 
-Route::get('/', function () {
-    return view('welcome');
+    //Front Routing
+
+    Route::namespace('Web')->group(function (){
+        Route::get('/','PageController@index')->name('index');
+
+    });
 });
+
