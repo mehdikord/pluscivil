@@ -275,9 +275,7 @@
     </div>
 </footer>
 <!-- End Footer Area -->
-
 <div class="go-top"><i class="fas fa-arrow-up"></i></div>
-
 <!-- jQuery Min JS -->
 <script src="{{asset('template/js/jquery.min.js')}}"></script>
 <!-- Popper Min JS -->
@@ -306,7 +304,6 @@
 <script src="{{asset('template/js/bahama-map.js')}}"></script>
 <!-- Main JS -->
 <script src="{{asset('template/js/main.js')}}"></script>
-
 @yield('script')
 </body>
 

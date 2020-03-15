@@ -9,6 +9,11 @@ class PageController extends Controller
 {
     public function index()
     {
-        return view('index');
+        if (auth()->check() && auth()->user()->role_id != 4){
+            //check Admins Login and redirect to management page
+           return redirect()->route('management_dashboard');
+        }else{
+            return view('index');
+        }
     }
 }

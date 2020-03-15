@@ -62,10 +62,13 @@
     src: url(../fonts/iranyekan/eot/iranyekanwebmediumfanum.eot?#iefix) format("embedded-opentype"), url(../fonts/iranyekan/woff/iranyekanwebmediumfanum.woff) format("woff"), url(../fonts/iranyekan/ttf/iranyekanwebmediumfanum.ttf) format("truetype")
 }
 
-body,h1,h2,h3,h4,h5,h6 {
+body,h1,h2,h3,h4,h5,h6,button {
     font-family: IRANSans !important;
 }
+.text-iransanse{
+    font-family: IRANSans !important;
 
+}
 .text-yekanbakh {
     font-family: yekanbakh !important
 }
