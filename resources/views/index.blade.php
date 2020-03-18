@@ -1,6 +1,6 @@
 @extends('layouts.front')
 @section('title')
-    ---
+    پلاس عمران
     @endsection
 @section('content')
     <!-- Start Main Banner Area -->
@@ -9,18 +9,11 @@
             <div class="row align-items-center m-0">
                 <div class="col-lg-6 p-0">
                     <div class="main-banner-content">
-                        <span class="sub-title"><i class="flaticon-wifi-signal"></i>بهاما برودباند سيرفيس</span>
-                        <h1>بنيت لخدمة الإنترنت</h1>
-                        <p>أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت، ااا التحرير العمالة آخرون غير مؤلمة ماجنا أي وحيوية، الذين سوف تفعل وقتها وزارة الدفاع.</p>
-
-                        <div class="price">
-                            $45 <span>/شهر</span>
-                        </div>
-
+                        <h2 class="text-white text-iranyekan">ثبت سفارش در <strong>پلاس عمران</strong></h2>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
                         <div class="btn-box">
-                            <a href="#" class="btn btn-primary">اطلب اقتباس</a>
+                            <a href="#" class="btn btn-primary">ثبت سفارش</a>
 
-                            <a href="https://www.youtube.com/watch?v=bk7McNUjWgw" class="video-btn popup-youtube"><i class="flaticon-multimedia"></i></a>
                         </div>
                     </div>
                 </div>
@@ -41,26 +34,24 @@
     <section class="features-area bg-image ptb-100">
         <div class="container">
             <div class="section-title">
-                    <span>
-                        <span class="icon">
-                            <i class="flaticon-wifi"></i>
-                        </span>
-
-                        <span>باهاما مقدم خدمات انترنت ميزات</span>
-                    </span>
-                <h2>نحن شركة خدمات الإنترنت في الولايات المتحدة الأمريكية</h2>
+                <h2 class="text-iranyekan">خدمات اصلی ما</h2>
             </div>
 
             <div class="row">
+                @foreach($‌main_services as $main_service)
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-features-box">
                         <div class="icon">
-                            <i class="flaticon-speedometer"></i>
+                            @if($main_service->logo != null)
+                            <img src="{{asset($main_service->logo)}}" alt="">
+                            @else
+                                <i class="fas fa-box-open"></i>
+                            @endif
                         </div>
 
-                        <h3>تنزيل 1 جيجابت في الثانية</h3>
+                        <h3 class="text-iranyekan">{{$main_service->name}}</h3>
 
-                        <p>أبجد هوز تعطي مثل أن المنافسة الجامعية الرئيسية للمستهلك، ولكن إعطاء حيوية لآخر السود.</p>
+                        <p>{{$main_service->short_description}}</p>
 
                         <div class="back-icon">
                             <i class="flaticon-speedometer"></i>
@@ -74,52 +65,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-features-box">
-                        <div class="icon">
-                            <i class="flaticon-speedometer-1"></i>
-                        </div>
-
-                        <h3>99 ٪ الجهوزية الإنترنت</h3>
-
-                        <p>أبجد هوز تعطي مثل أن المنافسة الجامعية الرئيسية للمستهلك، ولكن إعطاء حيوية لآخر السود.</p>
-
-                        <div class="back-icon">
-                            <i class="flaticon-speedometer-1"></i>
-                        </div>
-
-                        <a href="#" class="details-btn"><i class="flaticon-arrow-pointing-to-right"></i></a>
-
-                        <div class="image-box">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
-                    <div class="single-features-box">
-                        <div class="icon">
-                            <i class="flaticon-support"></i>
-                        </div>
-
-                        <h3>24/7 دعم العملاء في</h3>
-
-                        <p>أبجد هوز تعطي مثل أن المنافسة الجامعية الرئيسية للمستهلك، ولكن إعطاء حيوية لآخر السود.</p>
-
-                        <div class="back-icon">
-                            <i class="flaticon-support"></i>
-                        </div>
-
-                        <a href="#" class="details-btn"><i class="flaticon-arrow-pointing-to-right"></i></a>
-
-                        <div class="image-box">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -131,11 +77,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="about-content">
-                        <span class="sub-title"><i class="flaticon-care-about-environment"></i> حول باهاما</span>
-                        <h2>تجربة سحر التكنولوجيا لخدمتك أفضل</h2>
-                        <p>أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. الذين علقت أبجد الجزر جدا جدا، والحسومات تعزيز وإعطاء حيوية لآخر السود. أبجد الجزر جدا جدا، والحسومات تعزيز وإعطاء حيوية لآخر السود.</p>
+                        <h2 class="text-iranyekan">لورم ایپسوم متن ساختگی </h2>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                        </p>
 
-                        <a href="#" class="btn btn-primary">معرفة المزيد في</a>
+                        <a href="#" class="btn btn-primary">بیشتر بدانید</a>
                     </div>
                 </div>
 
@@ -157,10 +104,8 @@
                         <span class="icon">
                             <i class="flaticon-technical-support"></i>
                         </span>
-
-                        <span>الخدمات باهاما</span>
                     </span>
-                <h2>التالي استكشاف إمكانيات غير محدودة مقدم خدمات انترنت</h2>
+                <h2 class="text-iranyekan">ویژگی های منحصر به فرد ما</h2>
             </div>
 
             <div class="row">
@@ -252,133 +197,8 @@
     </section>
     <!-- End Services Area -->
 
-    <!-- Start Pricing Area -->
-    <section class="pricing-area ptb-100 extra-mb pb-0">
-        <div class="container">
-            <div class="section-title">
-                    <span>
-                        <span class="icon">
-                            <i class="flaticon-resume"></i>
-                        </span>
-
-                        <span>باهاما التسعير في</span>
-                    </span>
-                <h2>اكتشاف أفضل خططنا</h2>
-                <p>أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت، الحوار الاقتصادي الاستراتيجي لم حزب التحرير النوع هو لها آخرون غير مؤلمة ماجنا بعض الوقت وحيوية. الذين نفسها بتعليق التسرب.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-pricing-table">
-                        <div class="pricing-header">
-                            <div class="icon">
-                                <i class="flaticon-online-shop"></i>
-                            </div>
-
-                            <span>تلفزيون + الإنترنت</span>
-                            <h3>حزمة لاعب</h3>
-                        </div>
-
-                        <ul class="pricing-features-list">
-                            <li><i class="flaticon-check-mark"></i> 150+ القنوات</li>
-                            <li><i class="flaticon-check-mark"></i> اللحاق بالركب، وعند الطلب</li>
-                            <li><i class="flaticon-check-mark"></i> اتصال الهاتف الخليوي</li>
-                            <li><i class="flaticon-check-mark"></i> تصل إلى 100 ميغابت في الثانية الألياف</li>
-                            <li><i class="flaticon-check-mark"></i>أجهزة جعلت من 1-4</li>
-                        </ul>
-
-                        <div class="price">
-                            <span>من عند</span>
-                            <span>$</span>
-                            67.99
-                            <span>/شهر</span>
-                        </div>
-
-                        <a href="#" class="view-plans-btn">عرض الخطط</a>
-
-                        <div class="image-box">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-pricing-table active">
-                        <div class="pricing-header">
-                            <div class="icon">
-                                <i class="flaticon-online-shop"></i>
-                            </div>
-
-                            <span>تلفزيون + الإنترنت</span>
-                            <h3>بهاما صندوق التلفزيون</h3>
-                        </div>
-
-                        <ul class="pricing-features-list">
-                            <li><i class="flaticon-check-mark"></i> 150+ القنوات</li>
-                            <li><i class="flaticon-check-mark"></i> اللحاق بالركب، وعند الطلب</li>
-                            <li><i class="flaticon-check-mark"></i> اتصال الهاتف الخليوي</li>
-                            <li><i class="flaticon-check-mark"></i> تصل إلى 100 ميغابت في الثانية الألياف</li>
-                            <li><i class="flaticon-check-mark"></i>أجهزة جعلت من 1-4</li>
-                        </ul>
-
-                        <div class="price">
-                            <span>من عند</span>
-                            <span>$</span>
-                            79.99
-                            <span>/شهر</span>
-                        </div>
-
-                        <a href="#" class="view-plans-btn">عرض الخطط</a>
-
-                        <div class="image-box">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
-                    <div class="single-pricing-table">
-                        <div class="pricing-header">
-                            <div class="icon">
-                                <i class="flaticon-online-shop"></i>
-                            </div>
-
-                            <span>تلفزيون + الإنترنت</span>
-                            <h3>النطاق العريض وواي فاي</h3>
-                        </div>
-
-                        <ul class="pricing-features-list">
-                            <li><i class="flaticon-check-mark"></i> 150+ القنوات</li>
-                            <li><i class="flaticon-check-mark"></i> اللحاق بالركب، وعند الطلب</li>
-                            <li><i class="flaticon-check-mark"></i> اتصال الهاتف الخليوي</li>
-                            <li><i class="flaticon-check-mark"></i> تصل إلى 100 ميغابت في الثانية الألياف</li>
-                            <li><i class="flaticon-check-mark"></i>أجهزة جعلت من 1-4</li>
-                        </ul>
-
-                        <div class="price">
-                            <span>من عند</span>
-                            <span>$</span>
-                            99.99
-                            <span>/شهر</span>
-                        </div>
-
-                        <a href="#" class="view-plans-btn">عرض الخطط</a>
-
-                        <div class="image-box">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                            <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Pricing Area -->
-
     <!-- Start FAQ Area -->
-    <section class="faq-area bg-image ptb-100 extra-pt">
+    <section class="faq-area bg-image ptb-100 ">
         <div class="container">
             <div class="section-title">
                     <span>

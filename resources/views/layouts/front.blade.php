@@ -51,22 +51,15 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5">
                     <div class="top-header-left">
-                        <p><span>الكلمة الآن في:</span> <a href="#">800.567.1234</a></p>
+
                     </div>
                 </div>
 
                 <div class="col-lg-7 col-md-7">
                     <div class="top-header-right">
                         <div class="login-signup-btn">
-                            <p><a href="#">تسجيل الدخول</a> <span>وإما</span> <a href="#">تسجيل</a></p>
+                            <p><a href="#">ورود به حساب</a> <span>یا</span> <a href="#">ثبت نام</a></p>
                         </div>
-
-                        <ul class="social">
-                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -91,90 +84,39 @@
                     </a>
 
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a href="index.html" class="nav-link active">الصفحة الرئيسية<i class="fas fa-chevron-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="index.html" class="nav-link active">منزل واحد في</a></li>
-
-                                    <li class="nav-item"><a href="index-2.html" class="nav-link">المنزل اثنين</a></li>
-                                </ul>
+                        <ul class="navbar-nav text-iranyekan">
+                            <li class="nav-item"><a href="{{route('index')}}" class="nav-link active">صفحه اصلی</a>
                             </li>
-
-                            <li class="nav-item"><a href="#" class="nav-link">صفحات<i class="fas fa-chevron-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="#" class="nav-link">معلومات عنا</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="about-us-1.html" class="nav-link">معلومات عنا 1</a></li>
-
-                                            <li class="nav-item"><a href="about-us-2.html" class="nav-link">معلومات عنا 2</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="team.html" class="nav-link">الفريق</a></li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">خدمات</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="services-1.html" class="nav-link">نمط الخدمات 1</a></li>
-
-                                            <li class="nav-item"><a href="services-2.html" class="nav-link">نمط الخدمات 2</a></li>
-
-                                            <li class="nav-item"><a href="single-services.html" class="nav-link">تفاصيل الخدمات</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">تجول في السوق</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="shop.html" class="nav-link">تجول في السوق</a></li>
-
-                                            <li class="nav-item"><a href="single-product.html" class="nav-link">المنتجات الفردية في</a></li>
-
-                                            <li class="nav-item"><a href="cart.html" class="nav-link">عربة التسوق</a></li>
-
-                                            <li class="nav-item"><a href="checkout.html" class="nav-link">المخارج</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">مدونة</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>
-
-                                            <li class="nav-item"><a href="blog-2.html" class="nav-link">المدونة اليمنى الشريط الجانبي</a></li>
-
-                                            <li class="nav-item"><a href="single-blog.html" class="nav-link">تفاصيل المدونة</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="pricing.html" class="nav-link">تقييم الأسعار</a></li>
-
-                                    <li class="nav-item"><a href="error-404.html" class="nav-link">404 خطأ</a></li>
-
-                                    <li class="nav-item"><a href="faq.html" class="nav-link">التعليمات</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a href="#" class="nav-link">خدمات<i class="fas fa-chevron-down"></i></a>
+                            <li class="nav-item"><a href="#" class="nav-link">خدمات <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="services-1.html" class="nav-link">نمط الخدمات 1</a></li>
-
-                                    <li class="nav-item"><a href="services-2.html" class="nav-link">نمط الخدمات 2</a></li>
-
-                                    <li class="nav-item"><a href="single-services.html" class="nav-link">تفاصيل الخدمات</a></li>
                                 </ul>
                             </li>
-
-                            <li class="nav-item"><a href="#" class="nav-link">تجول في السوق <i class="fas fa-chevron-down"></i></a>
+                            <li class="nav-item"><a href="#" class="nav-link">نمونه کار ها <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="shop.html" class="nav-link">تجول في السوق</a></li>
-
-                                    <li class="nav-item"><a href="single-product.html" class="nav-link">المنتجات الفردية في</a></li>
-
-                                    <li class="nav-item"><a href="cart.html" class="nav-link">عربة التسوق</a></li>
-
-                                    <li class="nav-item"><a href="checkout.html" class="nav-link">المخارج</a></li>
                                 </ul>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">مدونة<i class="fas fa-chevron-down"></i></a>
+                            <li class="nav-item"><a href="#" class="nav-link">فروشگاه فایل <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>
+
+                                    <li class="nav-item"><a href="blog-2.html" class="nav-link">المدونة اليمنى الشريط الجانبي</a></li>
+
+                                    <li class="nav-item"><a href="single-blog.html" class="nav-link">تفاصيل المدونة</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link">بلاگ <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>
+
+                                    <li class="nav-item"><a href="blog-2.html" class="nav-link">المدونة اليمنى الشريط الجانبي</a></li>
+
+                                    <li class="nav-item"><a href="single-blog.html" class="nav-link">تفاصيل المدونة</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link">درباره ما <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>
 
@@ -184,12 +126,9 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item"><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">تماس با ما</a></li>
                         </ul>
 
-                        <div class="others-options">
-                            <a href="contact.html" class="btn btn-primary">الشروع في</a>
-                        </div>
                     </div>
                 </nav>
             </div>

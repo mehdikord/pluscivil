@@ -44,6 +44,17 @@ Route::group(['middleware'=>['web']],function (){
             Route::prefix('admins')->group(function (){
                 Route::get('index','UserController@admins_index')->name('management_admins_index');
                 Route::post('store','UserController@admins_store')->name('management_admins_store');
+                Route::post('update/{admin}','UserController@admins_update')->name('management_admins_update');
+            });
+
+            //Services
+            Route::prefix('services')->group(function (){
+                Route::get('index','ServiceController@index')->name('manager_service_index');
+                Route::get('create','ServiceController@create')->name('manager_service_create');
+                Route::get('store','ServiceController@store')->name('manager_service_store');
+                Route::get('edit/{service}','ServiceController@edit')->name('manager_service_edit');
+                Route::post('update/{service}','ServiceController@update')->name('manager_service_update');
+                Route::get('delete/{service}','ServiceController@delete')->name('manager_service_delete');
             });
         });
     });

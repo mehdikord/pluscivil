@@ -28,7 +28,7 @@ class CreateServicesTables extends Migration
             $table->string('price')->nullable();
             $table->string('sale')->nullable();
             $table->boolean('is_special')->default(0);
-            $table->boolean('is_products')->default(0);
+            $table->boolean('is_product')->default(0);
             $table->boolean('is_public')->default(1);
             $table->softDeletes();
             $table->timestamps();

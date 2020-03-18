@@ -130,8 +130,73 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <button title="ویرایش مدیر" type="button" class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
+                                    <button data-toggle="modal" data-target="#edit_{{$user->id}}" title="ویرایش مدیر" type="button" class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
                                         <i class="fas fa-user-edit"></i>
+                                    </button>
+                                    <div class="modal fade" id="edit_{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg " role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalCenterTitle">افزودن مدیر جدید</h5>
+                                                </div>
+                                                <form action="{{route('management_admins_update',['admin'=>$user->id])}}" method="post">
+                                                    @csrf
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label for="">نام و نام‌خانوادگی</label>
+                                                            <input type="text" class="form-control" name="name" value="{{$user->name}}" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">جنسیت</label>
+                                                            ‌<select name="gender_id" class="browser-default" required id="">
+                                                                <option @if($user->gender_id == 1) selected @endif value="1">آقا</option>
+                                                                <option @if($user->gender_id == 2) selected @endif value="2">خانم</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">آدرس ایمیل</label>
+                                                            <input value="{{$user->email}}" type="email" class="form-control" name="email" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">شماره موبایل</label>
+                                                            <input value="{{$user->phone}}" type="number" class="form-control" name="phone">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">استان</label>
+                                                            ‌<select name="province_id" class="browser-default"  id="province">
+                                                                <option disabled selected>استان مورد نظر را انتخاب کنید</option>
+                                                                @foreach($provinces as $province)
+                                                                    <option @if($user->province_id == $province->id) selected @endif value="{{$province->id}}">{{$province->name}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">شهر</label>
+                                                            ‌<select  name="city_id" class="browser-default"  id="city">
+                                                                @if($user->city_id != null)
+                                                                    <option value="{{$user->city_id}}">{{$user->city->name}}</option>
+                                                                @endif
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">سطح مدیریتی</label>
+                                                            ‌<select name="‌‌‌role_id" class="browser-default"  id="">
+                                                                <option @if($user->role_id == 1) selected @endif value="1">مدیر کل</option>
+                                                                <option @if($user->role_id == 2) selected @endif value="2">سرپرست</option>
+                                                                <option @if($user->role_id == 3) selected @endif value="3">مجری</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn bg-red" data-dismiss="modal">بستن</button>
+                                                        <button type="submit" class="btn btn-success">ویرایش مدیر</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="del({{$user->id}})" title="حذف مدیر" type="button" class="btn bg-danger btn-circle waves-effect waves-circle waves-float">
+                                        <i class="fas fa-trash"></i>
                                     </button>
                                 </td>
                             </tr>
@@ -163,6 +228,22 @@
                 }
             );
         });
+        function del(id) {
+            swal({
+                title: "هشدار",
+                text: "آیا مطمئن هستید ؟ در صورت حذف خدمت تمامی اطلاعات مربوط به مدیر نیز حذف خواهد شد.",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#31ff32",
+                confirmButtonText: "بله",
+                cancelButtonText:"خیر",
+                cancelButtonColor:"#31ff32",
+                closeOnConfirm: false
+            }, function () {
+                window.open('/management/admins/delete/'+id,'_self');
+            });
+
+        }
     </script>
 
 @endsection

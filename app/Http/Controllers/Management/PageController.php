@@ -7,9 +7,20 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('not_member')->except('login');
+    }
+
     public function login()
     {
-        return view('management.auth.login');
+        if (auth()->check())
+        {
+            return redirect()->route('management_dashboard');
+
+        }else{
+            return view('management.auth.login');
+        }
     }
 
     public function dashboard()
