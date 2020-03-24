@@ -61,6 +61,19 @@ Route::group(['middleware'=>['web']],function (){
                 Route::post('update/{service}','ServiceController@update')->name('manager_service_update');
                 Route::get('delete/{service}','ServiceController@delete')->name('manager_service_delete');
             });
+
+            //Settings
+            Route::prefix('settings')->group(function (){
+                Route::prefix('faqs')->group(function (){
+                    Route::get('index','FaqController@index')->name('management_settings_faq_index');
+                    Route::post('store','FaqController@store')->name('management_settings_faq_store');
+                    Route::post('update/{faq}','FaqController@update')->name('management_settings_faq_update');
+                    Route::get('delete/{faq}','FaqController@delete')->name('management_settings_faq_delete');
+                    Route::get('change/{faq}','FaqController@change')->name('management_settings_faq_change');
+
+
+                });
+            });
         });
     });
 });

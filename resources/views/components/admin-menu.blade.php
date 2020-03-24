@@ -29,4 +29,23 @@
         </li>
     </ul>
 </li>
-
+<li class="@if(\Illuminate\Support\Facades\Request::is('management/settings*')) active @endif">
+    <a href="#" onClick="return false;" class="menu-toggle">
+        <i class="fas fa-cog"></i>
+        <span>تنظیمات</span>
+    </a>
+    <ul class="ml-menu">
+        <li class="@if(\Illuminate\Support\Facades\Request::is('management/settings/faqs*')) active @endif">
+            <a href="#" onClick="return false;" class="menu-toggle">
+                <span>سوالات متداول</span>
+            </a>
+            <ul class="ml-menu">
+                <li class="@if(\Illuminate\Support\Facades\Request::is('management/settings/faqs/index')) active @endif">
+                    <a href="{{route('management_settings_faq_index')}}">
+                        <span>همه سوالات</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</li>

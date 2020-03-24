@@ -203,83 +203,27 @@
             <div class="section-title">
                     <span>
                         <span class="icon">
-                            <i class="flaticon-help"></i>
+                            <i class="fas fa-question"></i>
                         </span>
-
-                        <span>الأسئلة في كثير من الأحيان</span>
                     </span>
-                <h2>لماذا يجب أن تختار لنا <br>خدماتنا</h2>
+                <h2 class="text-iranyekan">سوالات متداول</h2>
             </div>
 
             <div class="row">
-                <div class="col-lg-6 col-md-12">
+                <div class="col-12 col-md-12">
                     <div class="faq-accordion">
                         <ul class="accordion">
+                            @foreach($faqs as $faq)
                             <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i>كيف أذونات العمل في جوو غلي اللعب حظة؟</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
+                                <a class="accordion-title" href="javascript:void(0)">
+                                    <i class="flaticon-add"></i>
+                                    {{$faq->question}}
+                                </a>
+                                <p class="accordion-content">
+                                    {{$faq->answer}}
+                                </p>
                             </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> هل القفل الذكي مطلوب للتطبيقات الفورية؟</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> هل يمكنني الحصول على أنشطة متعددة في ميزة واحدة؟</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> هل يمكنني مشاركة الموارد بين الميزات?</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> ويدعم العديد من لحظة المناسبة للتطبيقات?</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> هل يمكنني مشاركة الموارد بين الميزات?</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12">
-                    <div class="faq-accordion">
-                        <ul class="accordion">
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> ما هي الأشياء التي سوف تقدم من قبل باهاما الإنترنت</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> لماذا نحن الأفضل في هذه المجالات?</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> من الأفضل أن تكون الأول في العقل من السوق؟</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i>تحديد المواقع هو ما تفعله لاحتمال؟</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> الشخص الذي سوف يساعدك من باهاما؟</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)"><i class="flaticon-add"></i> لماذا يجب أن تختار لنا من غيرها؟</a>
-                                <p class="accordion-content">أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. والحيوية، بحيث تعبا وحزنا، وبعض الأمور الهامة. أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت.</p>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -294,14 +238,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-12">
                     <div class="cta-content">
-                        <h3>اتصل بنا الآن للاتصال باهاما</h3>
-                        <a href="#">+7(887) 332 43 43</a>
+                        <h3>چطوری با در ارتباط باشید ؟</h3>
+                        <a href="#">09111232525</a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-12">
                     <div class="cta-btn">
-                        <a href="#" class="btn btn-primary">تحقق التغطية في منطقتك</a>
+                        <a href="#" class="btn btn-primary">تماس با ما !</a>
                     </div>
                 </div>
             </div>

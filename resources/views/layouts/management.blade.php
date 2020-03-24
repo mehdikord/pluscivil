@@ -121,7 +121,7 @@
                 <!-- #END# Tasks -->
                 <li class="pull-right">
                     <a href="#" onClick="return false;" class="js-right-sidebar" data-close="true">
-                        <i class="nav-hdr-btn ti-layout-grid2"></i>
+                        <i class="nav-hdr-btn fas fa-cogs"></i>
                     </a>
                 </li>
             </ul>

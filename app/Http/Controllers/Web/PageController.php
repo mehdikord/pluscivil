@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Faq;
 use App\Http\Controllers\Controller;
 use App\Service;
 use Illuminate\Http\Request;
@@ -14,7 +15,8 @@ class PageController extends Controller
 //            //check Admins Login and redirect to management page
 //            return redirect()->route('management_dashboard');
 //        }else{
-            return view('front.index');
+        $faqs = Faq::where('is_active',1)->get();
+            return view('front.index',compact('faqs'));
 //        }
     }
 

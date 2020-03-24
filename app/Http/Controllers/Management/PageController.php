@@ -9,6 +9,7 @@ class PageController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('auth')->except('login');
         $this->middleware('not_member')->except('login');
     }
 
