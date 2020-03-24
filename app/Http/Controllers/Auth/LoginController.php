@@ -48,7 +48,7 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        //
+        alert_message('کاربر گرامی شما با موفقیت وارد حساب کاربریتان شدید','success');
     }
 
     protected function loggedOut(Request $request)

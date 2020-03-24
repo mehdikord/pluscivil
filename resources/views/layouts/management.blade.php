@@ -64,14 +64,14 @@
                 <!-- Full Screen Button -->
                 <li class="fullscreen">
                     <a href="javascript:;" class="fullscreen-btn">
-                        <i class="fas "></i>
+                        <i class="fas fa-square-full"></i>
                     </a>
                 </li>
                 <!-- #END# Full Screen Button -->
                 <!-- #START# Notifications-->
                 <li class="dropdown">
                     <a href="#" onClick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                        <i class="nav-hdr-btn ti-bell"></i>
+                        <i class="fa fa-bell text-info"></i>
                         <span class="notify"></span>
                         <span class="heartbeat"></span>
                     </a>
@@ -103,16 +103,16 @@
                 <!-- #END# Notifications-->
                 <li class="dropdown user_profile">
                     <div class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="assets/images/user.jpg" alt="user">
+                        <img width="40" src="@if(auth()->user()->profile != null) {{asset(auth()->user()->profile)}} @else {{asset('management/images/admin-user.svg')}} @endif" alt="user">
                     </div>
                     <ul class="dropdown-menu pullDown">
                         <li class="body">
                             <ul class="user_dw_menu">
                                 <li>
-                                    <a href="#"><i class="mdi mdi-account text-primary"></i>Profile</a>
+                                    <a href="#"><i class="fas fa-user text-primary"></i>پروفایل مدیریتی</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="mdi mdi-power-off mdi-18px text-danger"></i>Logout</a>
+                                    <a href="{{route('logout')}}"><i class="fas fa-power-off text-danger"></i>خروج از حساب</a>
                                 </li>
                             </ul>
                         </li>

@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="{{asset('template/css/rtl.css')}}">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{asset('template/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('sweetalert2/dist/sweetalert2.min.css')}}">
+
     <!-- Fonts CSS -->
     <link rel="stylesheet" href="{{asset('template/css/font.css')}}">
 
@@ -51,14 +53,20 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5">
                     <div class="top-header-left">
-
+                        @if(auth()->check())
+                            <span class="text-white">{{auth()->user()->name}} عزیز ، خوش اومدی</span> @if(auth()->user()->role_id < 4)<span><a class="btn btn-info" href="{{route('management_dashboard')}}">مدیریت</a></span> @endif
+                            @endif
                     </div>
                 </div>
 
                 <div class="col-lg-7 col-md-7">
                     <div class="top-header-right">
                         <div class="login-signup-btn">
-                            <p><a href="#">ورود به حساب</a> <span>یا</span> <a href="#">ثبت نام</a></p>
+                            @if(auth()->check())
+                                <p><a href="{{route('profile')}}" class="text-white"><i class="fas fa-user"></i> پروفایل کاربری</a><span> - </span> <a href="{{route('logout')}}" class="text-warning"><i class="fas fa-times"></i> خروج</a></p>
+                                @else
+                            <p><a href="{{route('front_login')}}">ورود به حساب</a> <span>یا</span> <a href="{{route('register')}}">ثبت نام</a></p>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -71,7 +79,7 @@
         <div class="bahama-mobile-nav">
             <div class="logo">
                 <a href="index.html">
-                    <img src="{{asset('template/img/logo.png')}}" alt="logo">
+                    <img src="" alt="logo">
                 </a>
             </div>
         </div>
@@ -80,49 +88,39 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="index.html">
-                        <img src="{{asset('template/img/logo.png')}}" alt="logo">
+                        <img src="" alt="logo">
                     </a>
-
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav text-iranyekan">
                             <li class="nav-item"><a href="{{route('index')}}" class="nav-link active">صفحه اصلی</a>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">خدمات <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="services-1.html" class="nav-link">نمط الخدمات 1</a></li>
+
+                                    @foreach($main_services as $main_service)
+                                    <li class="nav-item"><a href="" class="nav-link">{{$main_service->name}}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">نمونه کار ها <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="shop.html" class="nav-link">تجول في السوق</a></li>
+{{--                                    <li class="nav-item"><a href="shop.html" class="nav-link">تجول في السوق</a></li>--}}
                                 </ul>
                             </li>
 
                             <li class="nav-item"><a href="#" class="nav-link">فروشگاه فایل <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>
-
-                                    <li class="nav-item"><a href="blog-2.html" class="nav-link">المدونة اليمنى الشريط الجانبي</a></li>
-
-                                    <li class="nav-item"><a href="single-blog.html" class="nav-link">تفاصيل المدونة</a></li>
+{{--                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>--}}
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">بلاگ <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>
-
-                                    <li class="nav-item"><a href="blog-2.html" class="nav-link">المدونة اليمنى الشريط الجانبي</a></li>
-
-                                    <li class="nav-item"><a href="single-blog.html" class="nav-link">تفاصيل المدونة</a></li>
+{{--                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>--}}
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">درباره ما <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>
-
-                                    <li class="nav-item"><a href="blog-2.html" class="nav-link">المدونة اليمنى الشريط الجانبي</a></li>
-
-                                    <li class="nav-item"><a href="single-blog.html" class="nav-link">تفاصيل المدونة</a></li>
+{{--                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>--}}
                                 </ul>
                             </li>
 
@@ -214,6 +212,7 @@
     </div>
 </footer>
 <!-- End Footer Area -->
+<script src="{{asset('sweetalert2/dist/sweetalert2.all.min.js')}}"></script>
 <div class="go-top"><i class="fas fa-arrow-up"></i></div>
 <!-- jQuery Min JS -->
 <script src="{{asset('template/js/jquery.min.js')}}"></script>
@@ -243,6 +242,8 @@
 <script src="{{asset('template/js/bahama-map.js')}}"></script>
 <!-- Main JS -->
 <script src="{{asset('template/js/main.js')}}"></script>
+@include('includes.alert_message')
+@include('includes.simple_message')
 @yield('script')
 </body>
 

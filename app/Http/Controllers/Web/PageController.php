@@ -14,9 +14,17 @@ class PageController extends Controller
 //            //check Admins Login and redirect to management page
 //            return redirect()->route('management_dashboard');
 //        }else{
-
-            $‌main_services = Service::whereNull('parent_id')->where('is_public',1)->get();
-            return view('index',compact('‌main_services'));
+            return view('front.index');
 //        }
+    }
+
+    public function login()
+    {
+        return view('front.auth.login');
+    }
+
+    public function register()
+    {
+        return view('front.auth.register');
     }
 }

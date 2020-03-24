@@ -75,7 +75,7 @@ class ServiceController extends Controller
         Service::create([
             'user_id'=>auth()->id(),
             'name'=>$request->name,
-            'slug'=>$request->slug,
+            'slug'=>$slug,
             'parent_id'=>$request->parent_id,
             'link'=>$link,
             'logo'=>$path,

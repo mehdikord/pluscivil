@@ -27,11 +27,16 @@ Route::group(['middleware'=>['web']],function (){
     Route::namespace('Auth')->group(function (){
         Route::post('login','LoginController@login')->name('login');
         Route::get('logout','LoginController@logout')->name('logout');
+        Route::post('/register-send','RegisterController@register')->name('register-send');
+
     });
 
     //Front Routing
     Route::namespace('Web')->group(function (){
         Route::get('/','PageController@index')->name('index');
+        Route::get('/login','PageController@login')->name('front_login');
+        Route::get('/register','PageController@register')->name('register');
+        Route::get('/profile','ProfileController@profile')->name('profile');
     });
 
     //Management Routing
@@ -51,7 +56,7 @@ Route::group(['middleware'=>['web']],function (){
             Route::prefix('services')->group(function (){
                 Route::get('index','ServiceController@index')->name('manager_service_index');
                 Route::get('create','ServiceController@create')->name('manager_service_create');
-                Route::get('store','ServiceController@store')->name('manager_service_store');
+                Route::post('store','ServiceController@store')->name('manager_service_store');
                 Route::get('edit/{service}','ServiceController@edit')->name('manager_service_edit');
                 Route::post('update/{service}','ServiceController@update')->name('manager_service_update');
                 Route::get('delete/{service}','ServiceController@delete')->name('manager_service_delete');
