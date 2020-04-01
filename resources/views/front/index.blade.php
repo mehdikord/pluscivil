@@ -10,7 +10,9 @@
                 <div class="col-lg-6 p-0">
                     <div class="main-banner-content">
                         <h2 class="text-white text-iranyekan">ثبت سفارش در <strong>پلاس عمران</strong></h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                        <p>
+                            با اولین ثبت سفارش یه تخفیف باور نکردی و یه کار عالی از ما دریافت کن !
+                        </p>
                         <div class="btn-box">
                             <a href="#" class="btn btn-primary">ثبت سفارش</a>
 
@@ -77,12 +79,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="about-content">
-                        <h2 class="text-iranyekan">لورم ایپسوم متن ساختگی </h2>
+                        <h2 class="text-iranyekan">به ما اعتماد کنید! </h2>
                         <p>
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                            تیم حرفه ای و خستگی ناپذیر پلاس عمران در تلاشند تا با دانش و تخصص خود،
+                            <br>
+                            تمام خواسته های شما را به طور کامل و دقیق برآورده کنند
+                            <br>
+                            و بهترین خروجی را به شما تحویل دهند.
                         </p>
-
-                        <a href="#" class="btn btn-primary">بیشتر بدانید</a>
                     </div>
                 </div>
 
@@ -112,84 +116,75 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-services-box">
                         <div class="icon">
-                            <i class="flaticon-router"></i>
+                            <i class="fas fa-users"></i>
                         </div>
 
-                        <h3>النطاق العريض الرئيسية</h3>
-
-                        <p>الملكية الفكرية أبجد هوز دولور الجلوس امات، والدهون تعزيز الوراثة إيليت، سد تفعل وزارة الدفاع طويلة في والحيوية، بحيث أنفقت على العمل.</p>
-
-                        <a href="#" class="read-more-btn">اقراء المزيد على <i class="flaticon-arrow-pointing-to-right"></i></a>
+                        <h3 class="text-iranyekan">تیم حرفه ای و خلاق</h3>
+                        <p>
+                            بچه های حرفه و خلاق پلاس عمران با انرژی زیاد در تلاشند بهترین کارو به شما ارائه بدن!
+                        </p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-services-box">
                         <div class="icon">
-                            <i class="flaticon-wifi-1"></i>
+                            <i class="fas fa-microchip"></i>
                         </div>
 
-                        <h3>واي فاي المنزل</h3>
-
-                        <p>الملكية الفكرية أبجد هوز دولور الجلوس امات، والدهون تعزيز الوراثة إيليت، سد تفعل وزارة الدفاع طويلة في والحيوية، بحيث أنفقت على العمل.</p>
-
-                        <a href="#" class="read-more-btn">اقراء المزيد على <i class="flaticon-arrow-pointing-to-right"></i></a>
+                        <h3 class="text-iranyekan">استفاده از جدیدترین ها</h3>
+                        <p>استفاده از بهترین نرم افزار ها و جدیدترین تکنولوژی ها و ابزار دنیا برای بالا بردن سطح کیفی</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-services-box">
                         <div class="icon">
-                            <i class="flaticon-wifi-signal-tower"></i>
+                            <i class="fas fa-shield-alt"></i>
                         </div>
 
-                        <h3>الفضائيات</h3>
-
-                        <p>الملكية الفكرية أبجد هوز دولور الجلوس امات، والدهون تعزيز الوراثة إيليت، سد تفعل وزارة الدفاع طويلة في والحيوية، بحيث أنفقت على العمل.</p>
-
-                        <a href="#" class="read-more-btn">اقراء المزيد على <i class="flaticon-arrow-pointing-to-right"></i></a>
+                        <h3 class="text-iranyekan">امنیت بالا</h3>
+                        <p>
+                            وبسایت پلاس عمران، محیطی ایمین برای حفظ و نگهداری اطلاعات شما
+                        </p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-services-box">
                         <div class="icon">
-                            <i class="flaticon-online-shop"></i>
+                            <i class="fas fa-headset"></i>
                         </div>
 
-                        <h3>صندوق التلفزيون الموصول</h3>
+                        <h3 class="text-iranyekan">پشتیبانی 24/7</h3>
 
-                        <p>الملكية الفكرية أبجد هوز دولور الجلوس امات، والدهون تعزيز الوراثة إيليت، سد تفعل وزارة الدفاع طويلة في والحيوية، بحيث أنفقت على العمل.</p>
-
-                        <a href="#" class="read-more-btn">اقراء المزيد على <i class="flaticon-arrow-pointing-to-right"></i></a>
+                        <p>
+                            تیم پشتیبانی پلاس عمران همه روز پاسخگو مشکلات و سؤالات مشتریان هستند
+                        </p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-services-box">
                         <div class="icon">
-                            <i class="flaticon-key"></i>
+                            <i class="fas fa-hands-helping"></i>
                         </div>
 
-                        <h3>اتصال المحمول</h3>
-
-                        <p>الملكية الفكرية أبجد هوز دولور الجلوس امات، والدهون تعزيز الوراثة إيليت، سد تفعل وزارة الدفاع طويلة في والحيوية، بحيث أنفقت على العمل.</p>
-
-                        <a href="#" class="read-more-btn">اقراء المزيد على <i class="flaticon-arrow-pointing-to-right"></i></a>
+                        <h3 class="text-iranyekan">همراهی کامل</h3>
+                        <p>تیم اجرایی پلاس عمران در تمام مراحل انجام سفارش شما، همراه شما هستند !</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-services-box">
                         <div class="icon">
-                            <i class="flaticon-shield"></i>
+                            <i class="fas fa-laptop"></i>
                         </div>
 
-                        <h3>امن المنزل</h3>
-
-                        <p>الملكية الفكرية أبجد هوز دولور الجلوس امات، والدهون تعزيز الوراثة إيليت، سد تفعل وزارة الدفاع طويلة في والحيوية، بحيث أنفقت على العمل.</p>
-
-                        <a href="#" class="read-more-btn">اقراء المزيد على <i class="flaticon-arrow-pointing-to-right"></i></a>
+                        <h3 class="text-iranyekan">رابط کاربری ساده</h3>
+                        <p>
+                            در سایت پلاس عمران به راحتی سفارش دهید،خرید کنید و نتیجه را تحویل بگیرید
+                        </p>
                     </div>
                 </div>
             </div>
@@ -254,72 +249,6 @@
     <!-- End CTA Area -->
 
     <!-- Start Blog Area -->
-    <section class="blog-area ptb-100">
-        <div class="container">
-            <div class="section-title">
-                    <span>
-                        <span class="icon">
-                            <i class="flaticon-wifi-1"></i>
-                        </span>
 
-                        <span>تحديث أخبار باهاما</span>
-                    </span>
-                <h2>ماذا يكون تحديث التطبيق الأخبار <br>قريبا</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="{{asset('template/img/blog-img1.jpg')}}" alt="blog-image"></a>
-
-                        <div class="blog-post-content">
-                            <ul>
-                                <li><i class="fas fa-user-tie"></i> <a href="#">مشرف</a></li>
-                                <li><i class="far fa-clock"></i> 23 يناير 2020</li>
-                            </ul>
-                            <h3><a href="#">لقد استخدمت شبكة الإنترنت لمدة يوم على ميزانية 50 ميغابايت</a></h3>
-                            <p>أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت. مرضي ماسا القبيح، والحد من يبيرو غير المصنفة في الحياة.</p>
-
-                            <a href="#" class="read-more-btn">اقراء المزيد على <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="{{asset('template/img/blog-img2.jpg')}}" alt="blog-image"></a>
-
-                        <div class="blog-post-content">
-                            <ul>
-                                <li><i class="fas fa-user-tie"></i> <a href="#">مشرف</a></li>
-                                <li><i class="far fa-clock"></i> 25 يناير 2020</li>
-                            </ul>
-                            <h3><a href="#">لقد استخدمت شبكة الإنترنت لمدة يوم على ميزانية ميغابايت</a></h3>
-                            <p>أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت. مرضي ماسا القبيح، والحد من يبيرو غير المصنفة في الحياة.</p>
-
-                            <a href="#" class="read-more-btn">اقراء المزيد على <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
-                    <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="{{asset('template/img/blog-img3.jpg')}}" alt="blog-image"></a>
-
-                        <div class="blog-post-content">
-                            <ul>
-                                <li><i class="fas fa-user-tie"></i> <a href="#">مشرف</a></li>
-                                <li><i class="far fa-clock"></i> 27 يناير 2020</li>
-                            </ul>
-                            <h3><a href="#">لقد استخدمت شبكة الإنترنت لمدة يوم على ميزانية ميغابايت</a></h3>
-                            <p>أبجد هوز دولور الجلوس امات، والجامعية الرئيسية إيليت. مرضي ماسا القبيح، والحد من يبيرو غير المصنفة في الحياة.</p>
-
-                            <a href="#" class="read-more-btn">اقراء المزيد على <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- End Blog Area -->
     @endsection

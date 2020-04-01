@@ -29,6 +29,20 @@
         </li>
     </ul>
 </li>
+<li class="@if(\Illuminate\Support\Facades\Request::is('management/admins*')) active @endif">
+    <a href="#" onClick="return false;" class="menu-toggle">
+        <i class="fas fa-store"></i>
+        <span>فروشگاه فایل</span>
+    </a>
+    <ul class="ml-menu">
+        <li class="@if(\Illuminate\Support\Facades\Request::is('management/admins/index')) active @endif">
+            <a href="{{route('management_admins_index')}}">افزودن فایل جدید</a>
+        </li>
+        <li class="@if(\Illuminate\Support\Facades\Request::is('management/admins/index')) active @endif">
+            <a href="{{route('management_admins_index')}}">لیست همه فایل ها</a>
+        </li>
+    </ul>
+</li>
 <li class="@if(\Illuminate\Support\Facades\Request::is('management/settings*')) active @endif">
     <a href="#" onClick="return false;" class="menu-toggle">
         <i class="fas fa-cog"></i>

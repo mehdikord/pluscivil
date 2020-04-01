@@ -77,9 +77,9 @@
     <!-- Start Navbar Area -->
     <div class="navbar-area">
         <div class="bahama-mobile-nav">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="" alt="logo">
+            <div class="logo text-iranyekan text-white">
+                <a href="/">
+                    پلاس عمران
                 </a>
             </div>
         </div>
@@ -87,8 +87,9 @@
         <div class="bahama-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="" alt="logo">
+                    <a class="navbar-brand text-iranyekan text-white" href="/">
+                        پلاس عمران
+{{--                        <img src="" alt="logo">--}}
                     </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav text-iranyekan">
@@ -145,69 +146,19 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <div class="logo">
-                        <a href="#"><img src="{{asset('template/img/logo.png')}}" alt="image"></a>
-                        <p>أبجد هوز دولور الجلوس امات، إيليت تعزيز الرصد وطال الحوار الاقتصادي الاستراتيجي والحيوية، بحيث تعبا وحزنا، وبعض الأشياء الهامة التي يجب القيام القبيل. الذين نفسها.</p>
-                    </div>
-
-                    <form class="newsletter-form" data-toggle="validator">
-                        <input type="email" class="newsletter-input" placeholder="عنوان بريدك الإلكتروني" name="EMAIL" required autocomplete="off">
-                        <button type="submit"><i class="flaticon-paper-plane"></i></button>
-                        <div id="validator-newsletter" class="form-result"></div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h3>خدمات العملاء في</h3>
-
-                    <ul class="services-widget-list">
-                        <li><a href="#">بلدي باهاما</a></li>
-                        <li><a href="#">باهاما وسائل الإعلام</a></li>
-                        <li><a href="#">الاتصال والتكوين</a></li>
-                        <li><a href="#">تحمل</a></li>
-                        <li><a href="#">دروس الفيديو</a></li>
-                        <li><a href="#">تطبيق باهاما</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h3>روابط مفيدة في</h3>
-
-                    <ul class="links-widget-list">
-                        <li><a href="#">خريطة التغطية</a></li>
-                        <li><a href="#">النشرة الإخبارية</a></li>
-                        <li><a href="#">تطبق الشروط والأحكام</a></li>
-                        <li><a href="#">إنحراف عن الشكل</a></li>
-                        <li><a href="#">الشهادات - التوصيات</a></li>
-                        <li><a href="#">شركاؤنا</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h3>ابقى على تواصل</h3>
-
-                    <div class="widget-contact-info">
-                        <p>
-                            <a href="#">1 (800) 216 20 20</a>
-                            <span>(خدمة العملاء والدعم)</span>
-                            <a href="#">1 (800) 216 20 20</a>
-                            <span>(للعملاء الجدد)</span>
-                            1600 هاريسون افي، مكتب 203، نيويورك، 309090
-                        </p>
+                        <a href="/" class="text-iranyekan text-white">پلاس عمران</a>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
     <div class="copyright-area">
         <div class="container">
-            <p><i class="far fa-copyright"></i>حقوق الطبع والنشر بهاما 2019 جميع الحقوق محفوظة</p>
+            <p><i class="fas fa-copyright"></i> تمامی حقوق برای پلاس عمران محفوظ است</p>
+            <hr class="bg-white w-50">
+            <p><i class="fas fa-laptop-code"></i>  طراحی،توسعه و پشتیبانی <a class="text-white" href="http://mehdikord.ir">Mehdi Kord</a></p>
         </div>
     </div>
 </footer>
