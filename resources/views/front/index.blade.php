@@ -1,4 +1,12 @@
 @extends('layouts.front')
+@section('head')
+    <style>
+        .faq-img
+        {
+            max-width: 360px!important;
+        }
+    </style>
+    @endsection
 @section('title')
     پلاس عمران
     @endsection
@@ -203,8 +211,12 @@
                     </span>
                 <h2 class="text-iranyekan">سوالات متداول</h2>
             </div>
-
             <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <img src="{{asset('template/img/bg/faqs.svg')}}" class="mt-3 mb-3 faq-img" alt="">
+                    </div>
+                </div>
                 <div class="col-12 col-md-12">
                     <div class="faq-accordion">
                         <ul class="accordion">
