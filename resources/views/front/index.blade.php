@@ -3,7 +3,7 @@
     <style>
         .faq-img
         {
-            max-width: 360px!important;
+            max-width: 300px!important;
         }
     </style>
     @endsection
@@ -171,7 +171,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-services-box">
                         <div class="icon">

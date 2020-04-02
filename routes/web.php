@@ -15,11 +15,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 Route::get('test',function (){
- if (\auth()->check()){
-     return 1;
- }else{
-     return 00;
- }
+
 });
 Route::group(['middleware'=>['web']],function (){
 
@@ -62,6 +58,16 @@ Route::group(['middleware'=>['web']],function (){
                 Route::get('delete/{service}','ServiceController@delete')->name('manager_service_delete');
             });
 
+            //Files store
+            Route::prefix('files')->group(function (){
+                Route::get('index','FileController@index')->name('manager_file_index');
+                Route::get('create','FileController@create')->name('manager_file_create');
+                Route::post('store','FileController@store')->name('manager_file_store');
+                Route::get('edit/{service}','ServiceController@edit')->name('manager_service_edit');
+                Route::post('update/{service}','ServiceController@update')->name('manager_service_update');
+                Route::get('delete/{service}','ServiceController@delete')->name('manager_service_delete');
+            });
+
             //Settings
             Route::prefix('settings')->group(function (){
                 Route::prefix('faqs')->group(function (){
@@ -74,6 +80,9 @@ Route::group(['middleware'=>['web']],function (){
 
                 });
             });
+
+
+
         });
     });
 });

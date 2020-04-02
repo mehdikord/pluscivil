@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b63763a-73a2-457d-955e-0336b842d9d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/template/img/bg/faqs.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/File.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/File_image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Management/FileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_04_03_025153_add_new_field_into_files.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/management/files/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/admin-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin-menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/management/files/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/management/files/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +160,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowDatabase.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
@@ -214,6 +222,8 @@
       <workItem from="1585394960435" duration="40000" />
       <workItem from="1585395158974" duration="28000" />
       <workItem from="1585773705059" duration="8865000" />
+      <workItem from="1585842068911" duration="29000" />
+      <workItem from="1585848053065" duration="11519000" />
     </task>
     <servers />
   </component>
@@ -224,20 +234,24 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="403" y="314" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585860949198">
+      <screen x="0" y="30" width="1280" height="994" />
+    </state>
+    <state x="403" y="314" key="#com.intellij.fileTypes.FileTypeChooser/0.30.1280.994@0.30.1280.994" timestamp="1585860949198" />
     <state x="463" y="292" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584903287589">
       <screen x="0" y="30" width="1280" height="994" />
     </state>
     <state x="463" y="292" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1280.994@0.30.1280.994" timestamp="1584903287589" />
     <state x="695" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1584444946745" />
-    <state x="497" y="292" key="FileChooserDialogImpl" timestamp="1585376611068">
+    <state x="497" y="292" key="FileChooserDialogImpl" timestamp="1585848456902">
       <screen x="0" y="30" width="1280" height="994" />
     </state>
-    <state x="497" y="292" key="FileChooserDialogImpl/0.30.1280.994@0.30.1280.994" timestamp="1585376611068" />
+    <state x="497" y="292" key="FileChooserDialogImpl/0.30.1280.994@0.30.1280.994" timestamp="1585848456902" />
     <state x="745" y="311" key="FileChooserDialogImpl/0.36.1920.1044@0.36.1920.1044" timestamp="1585118656262" />
-    <state x="519" y="448" key="NewPhpFileDialog" timestamp="1585782341836">
+    <state x="519" y="448" key="NewPhpFileDialog" timestamp="1585866446488">
       <screen x="0" y="30" width="1280" height="994" />
     </state>
-    <state x="519" y="448" key="NewPhpFileDialog/0.30.1280.994@0.30.1280.994" timestamp="1585782341836" />
+    <state x="519" y="448" key="NewPhpFileDialog/0.30.1280.994@0.30.1280.994" timestamp="1585866446488" />
     <state x="779" y="475" key="NewPhpFileDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1584442864423" />
     <state x="458" y="188" key="SettingsEditor" timestamp="1585111726644">
       <screen x="0" y="36" width="1920" height="1044" />
@@ -270,6 +284,11 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Management/ServiceController.php</url>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/front/index.blade.php</url>
+          <line>242</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

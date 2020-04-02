@@ -28,60 +28,47 @@
                 <h2>اطلاعات خواسته شده را به طور دقیق کامل کنید </h2>
             </div>
             <div class="body">
-                <form action="{{route('manager_service_store')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('manager_file_store')}}" method="post" enctype="multipart/form-data">
                     @csrf
-                    <div class="col-6 form-group">
-                        <label for="">وابستگی</label>
-                        <select name="parent_id" class="browser-default" id="">
+                    <div class="form-group">
+                        <label for="">انتخاب دسته بندی</label>
+                        <select name="service_id" class="browser-default" id="">
                             <option></option>
                             @foreach($services as $service)
                                 <option value="{{$service->id}}">{{$service->name}}</option>
                             @endforeach
                         </select>
                     </div>
-                    <div class="col-6 form-group">
-                        <label for="">نام خدمت</label>
+                    <div class="form-group">
+                        <label for="">نام فایل</label>
                         <input value="{{old('name')}}" type="text" class="form-control" name="name" required>
                     </div>
-                    <div class="col-6 form-group">
-                        <label for="">پیوند یکتا</label>
-                        <input type="text" value="{{old('slug')}}" class="form-control" name="slug" required placeholder="مثال : architect">
-                        <small>به صورت انگلیسی وارد شود</small>
-                    </div>
-                    <div class="col-6 form-group">
-                        <label for="">توضیحات کوتاه</label>
-                        <textarea name="short_description" id="" cols="30" rows="5">{{old('short_description')}}</textarea>
-                    </div>
-                    <div class="col-6 form-group">
+                    <div class="form-group">
                         <label for="">توضیحات کامل</label>
-                        <textarea name="long_description" id="" cols="30" rows="5">{{old('long_description')}}</textarea>
+                        <textarea name="description" id="" cols="30" rows="5">{{old('description')}}</textarea>
                     </div>
-                    <div class="col-6 form-group">
-                        <label for="">لوگوی خدمت</label>
-                        <input type="file" name="logo" class="form-control">
-                        <small>اختیاری</small>
-                    </div>
-                    <div class="col-6 form-group">
-                        <label for="">مدت انجام خدمت</label>
-                        <input type="text" value="{{old('time_to_do')}}" name="time_to_do" class="form-control">
-                        <small>اختیاری</small>
-                    </div>
-                    <div class="col-6 form-group">
-                        <label for="">هزینه انجام خدمت</label>
+                    <div class="form-group">
+                        <label for="">قیمت فایل</label>
                         <input type="number" value="{{old('price')}}" name="price" class="form-control">
-                        <small>اختیاری - قیمت وارده شده به تومان محاسبه میشود</small>
+                        <small>قیمت وارده شده به تومان محاسبه میشود</small>
                     </div>
-                    <div class="col-6 form-group">
-                        <label for="">هزینه با تخفیف انجام خدمت</label>
+                    <div class="form-group">
+                        <label for="">قیمت فایل با تخفیف</label>
                         <input type="number" value="{{old('sale')}}" name="sale" class="form-control">
                         <small>اختیاری - قیمت وارده شده به تومان محاسبه میشود</small>
                     </div>
-                    <div class="col-6 form-group">
-                        <label for="">نام های دیگر</label>
-                        <input type="text" value="{{old('other_name')}}" name="other_name" class="form-control">
-                        <small>اختیاری</small>
+                    <div class="form-group">
+                        <label for="">ارسال فایل</label>
+                        <input type="file" name="file" class="form-control">
                     </div>
-                    <div class="col-6 form-group">
+                    <div class="form-group">
+                        <label for="">در فروشگاه فعال باشد</label>
+                        <select name="is_active" class="form-control" id="">
+                            <option  value="1">بله</option>
+                            <option value="0">خیر</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="">آیا ویژه است</label>
                         <select name="is_special" class="form-control" id="">
                             <option  value="1">بله</option>
@@ -89,7 +76,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary btn-lg">افزودن خدمت جدید</button>
+                        <button class="btn btn-primary btn-lg">افزودن فایل جدید</button>
                     </div>
                 </form>
             </div>

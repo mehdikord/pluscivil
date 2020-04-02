@@ -29,17 +29,17 @@
         </li>
     </ul>
 </li>
-<li class="@if(\Illuminate\Support\Facades\Request::is('management/admins*')) active @endif">
+<li class="@if(\Illuminate\Support\Facades\Request::is('management/files*')) active @endif">
     <a href="#" onClick="return false;" class="menu-toggle">
         <i class="fas fa-store"></i>
         <span>فروشگاه فایل</span>
     </a>
     <ul class="ml-menu">
-        <li class="@if(\Illuminate\Support\Facades\Request::is('management/admins/index')) active @endif">
-            <a href="{{route('management_admins_index')}}">افزودن فایل جدید</a>
+        <li class="@if(\Illuminate\Support\Facades\Request::is('management/files/create')) active @endif">
+            <a href="{{route('manager_file_create')}}">افزودن فایل جدید</a>
         </li>
         <li class="@if(\Illuminate\Support\Facades\Request::is('management/admins/index')) active @endif">
-            <a href="{{route('management_admins_index')}}">لیست همه فایل ها</a>
+            <a href="{{route('manager_file_index')}}">لیست همه فایل ها</a>
         </li>
     </ul>
 </li>
