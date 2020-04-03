@@ -43,7 +43,7 @@ class FileController extends Controller
             'sale'=>'nullable|numeric',
             'is_active'=>'numeric',
             'is_special'=>'numeric',
-            'file'=>'required|image',
+            'file'=>'required|mimes:doc,docm,docx,ppt,pptx,xlsx,xlsm,xltx,xltm,mpp,pdf',
         ]);
         if ($request->filled('sale'))
         {
@@ -63,7 +63,7 @@ class FileController extends Controller
             'name'=>$request->name,
             'code'=>$code,
             'token'=>$token,
-            'file'=>"private".$path,
+            'file'=>"private/".$path,
             'extension'=>$request->file('file')->extension(),
             'price'=>Crypt::encrypt($request->price),
             'sale'=>$sale,
@@ -72,6 +72,92 @@ class FileController extends Controller
             'is_special'=>$request->is_special,
         ]);
         alert_message('فایل جدید با موفقیت به فروشگاه اضافه شد','success');
+        return back();
+    }
+
+    public function edit(File $file)
+    {
+        $services = Service::select(['id','name'])->get();
+        return view('management.files.edit',compact('file','services'));
+
+
+    }
+
+    public function update(File $file,Request $request)
+    {
+        $this->validate($request,[
+            'service_id'=>'nullable|numeric',
+            'name'=>'required',
+            'price'=>'required|numeric|min:1',
+            'sale'=>'nullable|numeric',
+            'is_active'=>'numeric',
+            'is_special'=>'numeric',
+            'file'=>'nullable|mimes:doc,docm,docx,ppt,pptx,xlsx,xlsm,xltx,xltm,mpp,pdf',
+        ]);
+        if ($request->filled('sale'))
+        {
+            $sale  = Crypt::encrypt($request->sale);
+        }else{
+            $sale=null;
+        }
+        if ($request->filled('file'))
+        {
+            if ($request->file('file')->isValid())
+            {
+                $path = "private/".Storage::disk('private')->put('',$request->file('file'),'private');
+            }else
+            {
+                $path=null;
+            }
+
+            if ($request->file('file')->isValid())
+            {
+                $extension = $request->file('file')->extension();
+            }else{
+                $extension=null;
+            }
+        }else{
+            $extension=null;
+            $path=null;
+        }
+        $file->update([
+            'user_id'=>auth()->id(),
+            'service_id'=>$request->service_id,
+            'name'=>$request->name,
+            'file'=>$path,
+            'extension'=>$extension,
+            'price'=>Crypt::encrypt($request->price),
+            'sale'=>$sale,
+            'description'=>$request->description,
+            'is_active'=>$request->is_active,
+            'is_special'=>$request->is_special,
+        ]);
+        alert_message('فایی مورد نظر با موفقیت ویرایش شد','success');
+        return back();
+    }
+
+    public function active(File $file)
+    {
+        if ($file->is_active==1)
+        {
+            $file->update(['is_active'=>0]);
+            alert_message('نمایش فایل در فروشگاه غیرفعال شد','success');
+        }else{
+            $file->update(['is_active'=>1]);
+            alert_message('نمایش فایل در فروشگاه فعال شد','success');
+        }
+        return back();
+    }
+    public function special(File $file)
+    {
+        if ($file->is_special==1)
+        {
+            $file->update(['is_special'=>0]);
+            alert_message('حالت ویژه فایل غیرفعال شد','success');
+        }else{
+            $file->update(['is_special'=>1]);
+            alert_message('حالت ویژه فایل فعال شد','success');
+        }
         return back();
     }
 }

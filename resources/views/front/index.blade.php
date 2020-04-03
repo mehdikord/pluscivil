@@ -81,7 +81,7 @@
     </section>
     <!-- End Features Area -->
 
-    <!-- Start About Area -->
+    <!-- Start trust Area -->
     <section class="about-area ptb-100">
         <div class="container">
             <div class="row align-items-center">
@@ -106,9 +106,43 @@
             </div>
         </div>
     </section>
-    <!-- End About Area -->
+    <!-- End Trust Area -->
 
-    <!-- Start Services Area -->
+    <!-- Start File store Area -->
+    <section class="about-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-image">
+                        <img src="{{asset('/template/img/bg/file-store1.svg')}}" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-content">
+                        <h2 class="text-iranyekan">فروشگاه فایل </h2>
+                        <p class="text-justify font-16">
+                            فروشگاه فایل پلاس عمران،فروشگاهی منحصر به فرد برای متخصصین و دانشجویان حوضه عمران و معماری
+                            <br>
+                            این فروشگاه شامل فایل های تخصصی از جمله:
+                        </p>
+                        <ul>
+                            <li>مقالات تخصصی و عمومی</li>
+                            <li>پاورپونت های تخصصی برای ارائه دانشجویان</li>
+                            <li>بخش نامه های سازمان نظام مهندسی</li>
+                            <li>و...</li>
+                        </ul>
+                        <p>
+                            فروشگاه فایل پلاس عمران همچنین دارای فایل ها و مقالات رایگان برای کمک به دانشجویان عزیز میباشد
+                        </p>
+                        <a class="btn btn-lg btn-danger text-iranyekan" href="{{route('front.file.store')}}"><i class="fas fa-store"></i> ورود به فروشگاه</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End File store Area -->
+
+    <!-- Start Specials Area -->
     <section class="services-area bg-image ptb-100">
         <div class="container">
             <div class="section-title">
@@ -197,7 +231,7 @@
             </div>
         </div>
     </section>
-    <!-- End Services Area -->
+    <!-- End Specials Area -->
 
     <!-- Start FAQ Area -->
     <section class="faq-area bg-image ptb-100 ">

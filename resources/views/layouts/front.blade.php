@@ -93,7 +93,7 @@
                     </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav text-iranyekan">
-                            <li class="nav-item"><a href="{{route('index')}}" class="nav-link active">صفحه اصلی</a>
+                            <li class="nav-item"><a href="{{route('index')}}" class="nav-link @if(\Illuminate\Support\Facades\Request::is('/')) active @endif">صفحه اصلی</a>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">خدمات <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
@@ -109,9 +109,9 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">فروشگاه فایل <i class="fas fa-chevron-down"></i></a>
+                            <li class="nav-item"><a href="#" class="nav-link @if(\Illuminate\Support\Facades\Request::is('store')) active @endif">فروشگاه فایل <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-{{--                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>--}}
+                                    <li class="nav-item"><a href="{{route('front.file.store')}}" class="nav-link">ورود به فروشگاه</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">بلاگ <i class="fas fa-chevron-down"></i></a>

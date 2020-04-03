@@ -62,16 +62,16 @@
                                 <td>@if($file->sale != null){{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->sale))}}@endif</td>
                                 <td class="text-center">
                                     @if($file->is_active == 1)
-                                        <i class="fas fa-check text-success"></i>
+                                        <a href="{{route('manager_file_special',['file'=>$file->id])}}" class="fas fa-check text-success"></a>
                                         @else
-                                        <i class="fas fa-times text-danger"></i>
+                                        <a href="{{route('manager_file_special',['file'=>$file->id])}}" class="fas fa-times text-danger"></a>
                                     @endif
                                 </td>
                                 <td class="text-center">
                                     @if($file->is_special == 1)
-                                        <i class="fas fa-check text-success"></i>
+                                        <a href="{{route('manager_file_active',['file'=>$file->id])}}" class="fas fa-check text-success"></a>
                                     @else
-                                        <i class="fas fa-times text-danger"></i>
+                                        <a href="{{route('manager_file_active',['file'=>$file->id])}}" class="fas fa-times text-danger"></a>
                                     @endif
                                 </td>
                                 <td>{{$file->extension}}</td>
@@ -79,6 +79,15 @@
                                 <td>
                                     <a  title="مشاهده" type="button" class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
                                         <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="{{route('manager_file_edit',['file'=>$file->id])}}" title="ویرایش" type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a  title="گزارش گیری" type="button" class="btn btn-danger btn-circle waves-effect waves-circle waves-float">
+                                        <i class="fas fa-chart-line"></i>
+                                    </a>
+                                    <a  title="دریافت فایل" type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float">
+                                        <i class="fas fa-download"></i>
                                     </a>
                                 </td>
                             </tr>

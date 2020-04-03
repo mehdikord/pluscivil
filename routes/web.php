@@ -33,6 +33,9 @@ Route::group(['middleware'=>['web']],function (){
         Route::get('/login','PageController@login')->name('front_login');
         Route::get('/register','PageController@register')->name('register');
         Route::get('/profile','ProfileController@profile')->name('profile');
+
+        //file store
+        Route::get('store','PageController@file_store')->name('front.file.store');
     });
 
     //Management Routing
@@ -63,9 +66,10 @@ Route::group(['middleware'=>['web']],function (){
                 Route::get('index','FileController@index')->name('manager_file_index');
                 Route::get('create','FileController@create')->name('manager_file_create');
                 Route::post('store','FileController@store')->name('manager_file_store');
-                Route::get('edit/{service}','ServiceController@edit')->name('manager_service_edit');
-                Route::post('update/{service}','ServiceController@update')->name('manager_service_update');
-                Route::get('delete/{service}','ServiceController@delete')->name('manager_service_delete');
+                Route::get('edit/{file}','FileController@edit')->name('manager_file_edit');
+                Route::post('update/{file}','FileController@update')->name('manager_file_update');
+                Route::get('active/{file}','FileController@active')->name('manager_file_active');
+                Route::get('special/{file}','FileController@active')->name('manager_file_special');
             });
 
             //Settings
