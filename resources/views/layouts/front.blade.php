@@ -58,7 +58,6 @@
                             @endif
                     </div>
                 </div>
-
                 <div class="col-lg-7 col-md-7">
                     <div class="top-header-right">
                         <div class="login-signup-btn">

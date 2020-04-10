@@ -33,7 +33,6 @@
                     <div class="form-group">
                         <label for="">انتخاب دسته بندی</label>
                         <select name="service_id" class="browser-default" id="">
-                            <option></option>
                             @foreach($services as $service)
                                 <option @if($file->service_id == $service->id) selected @endif value="{{$service->id}}">{{$service->name}}</option>
                             @endforeach

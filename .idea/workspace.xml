@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b63763a-73a2-457d-955e-0336b842d9d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/template/img/bg/file-lock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template/img/bg/file-store-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template/img/bg/file-store-bg2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template/img/bg/file-store1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/store/file-store.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/management/files/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/management/images/stor-no-data.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/template/img/bg/file-single.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/store/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/includes/store-nodata.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Management/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Management/FileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/template/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/template/css/font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/store/file-store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/store/file-store.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/management/files/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/management/files/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/management/files/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/management/files/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/management/files/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/management/files/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -168,17 +167,17 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/template/img/bg" />
-      <recent name="$PROJECT_DIR$/resources/views/front/auth" />
-      <recent name="$PROJECT_DIR$/resources/views/front" />
-      <recent name="$PROJECT_DIR$/public/management/images" />
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/management/images" />
       <recent name="$PROJECT_DIR$/resources/lang" />
       <recent name="$PROJECT_DIR$/resources/views/includes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/template/img/bg" />
+      <recent name="$PROJECT_DIR$/public/management/images" />
+      <recent name="$PROJECT_DIR$/resources/views/front/auth" />
+      <recent name="$PROJECT_DIR$/resources/views/front" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunManager">
@@ -228,7 +227,13 @@
       <workItem from="1585842068911" duration="29000" />
       <workItem from="1585848053065" duration="11667000" />
       <workItem from="1585910010000" duration="73000" />
-      <workItem from="1585940738269" duration="15685000" />
+      <workItem from="1585940738269" duration="15897000" />
+      <workItem from="1586017347033" duration="50000" />
+      <workItem from="1586017944083" duration="437000" />
+      <workItem from="1586018423454" duration="2610000" />
+      <workItem from="1586031848043" duration="770000" />
+      <workItem from="1586118027404" duration="494000" />
+      <workItem from="1586536482069" duration="14477000" />
     </task>
     <servers />
   </component>
@@ -248,21 +253,21 @@
     </state>
     <state x="463" y="292" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1280.994@0.30.1280.994" timestamp="1584903287589" />
     <state x="695" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1584444946745" />
-    <state x="497" y="292" key="FileChooserDialogImpl" timestamp="1585910081122">
-      <screen x="0" y="30" width="1280" height="994" />
+    <state x="745" y="311" key="FileChooserDialogImpl" timestamp="1586033919984">
+      <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state x="497" y="292" key="FileChooserDialogImpl/0.30.1280.994@0.30.1280.994" timestamp="1585910081122" />
-    <state x="745" y="311" key="FileChooserDialogImpl/0.36.1920.1044@0.36.1920.1044" timestamp="1585118656262" />
-    <state x="519" y="448" key="NewPhpFileDialog" timestamp="1585950014917">
-      <screen x="0" y="30" width="1280" height="994" />
+    <state x="497" y="292" key="FileChooserDialogImpl/0.30.1280.994@0.30.1280.994" timestamp="1586017393998" />
+    <state x="745" y="311" key="FileChooserDialogImpl/0.36.1920.1044@0.36.1920.1044" timestamp="1586033919984" />
+    <state x="779" y="475" key="NewPhpFileDialog" timestamp="1586546564607">
+      <screen x="0" y="36" width="1920" height="1044" />
     </state>
     <state x="519" y="448" key="NewPhpFileDialog/0.30.1280.994@0.30.1280.994" timestamp="1585950014917" />
-    <state x="779" y="475" key="NewPhpFileDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1584442864423" />
-    <state x="458" y="188" key="SettingsEditor" timestamp="1585111726644">
+    <state x="779" y="475" key="NewPhpFileDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1586546564607" />
+    <state x="458" y="188" key="SettingsEditor" timestamp="1586536493351">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
     <state x="277" y="175" key="SettingsEditor/0.30.1280.994@0.30.1280.994" timestamp="1585081475441" />
-    <state x="458" y="188" key="SettingsEditor/0.36.1920.1044@0.36.1920.1044" timestamp="1585111726644" />
+    <state x="458" y="188" key="SettingsEditor/0.36.1920.1044@0.36.1920.1044" timestamp="1586536493351" />
     <state x="307" y="241" width="665" height="570" key="find.popup" timestamp="1585351818397">
       <screen x="0" y="30" width="1280" height="994" />
     </state>
@@ -272,11 +277,15 @@
     </state>
     <state x="414" y="238" key="run.anything.popup/0.30.1280.994@0.30.1280.994" timestamp="1585945763885" />
     <state x="621" y="254" key="run.anything.popup/0.36.1920.1044@0.36.1920.1044" timestamp="1584214226387" />
-    <state x="415" y="246" width="672" height="646" key="search.everywhere.popup" timestamp="1585957304970">
+    <state x="623" y="263" width="672" height="678" key="search.everywhere.popup" timestamp="1586555884310">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state x="415" y="246" width="672" height="646" key="search.everywhere.popup/0.30.1280.994@0.30.1280.994" timestamp="1586118500733" />
+    <state x="623" y="263" width="672" height="678" key="search.everywhere.popup/0.36.1920.1044@0.36.1920.1044" timestamp="1586555884310" />
+    <state x="367" y="429" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1586019786829">
       <screen x="0" y="30" width="1280" height="994" />
     </state>
-    <state x="415" y="246" width="672" height="646" key="search.everywhere.popup/0.30.1280.994@0.30.1280.994" timestamp="1585957304970" />
-    <state x="623" y="263" width="672" height="678" key="search.everywhere.popup/0.36.1920.1044@0.36.1920.1044" timestamp="1585394982560" />
+    <state x="367" y="429" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.30.1280.994@0.30.1280.994" timestamp="1586019786829" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -294,6 +303,11 @@
           <url>file://$PROJECT_DIR$/resources/views/front/index.blade.php</url>
           <line>276</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/front/store/show.blade.php</url>
+          <line>108</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

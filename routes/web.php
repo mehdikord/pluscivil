@@ -36,6 +36,7 @@ Route::group(['middleware'=>['web']],function (){
 
         //file store
         Route::get('store','PageController@file_store')->name('front.file.store');
+        Route::get('store/file/{file}','PageController@show_file')->name('front.file.store.show');
     });
 
     //Management Routing
@@ -70,6 +71,9 @@ Route::group(['middleware'=>['web']],function (){
                 Route::post('update/{file}','FileController@update')->name('manager_file_update');
                 Route::get('active/{file}','FileController@active')->name('manager_file_active');
                 Route::get('special/{file}','FileController@active')->name('manager_file_special');
+                Route::get('download/{file}','FileController@download')->name('manager_file_download');
+                Route::post('add/image/{file}','FileController@add_image')->name('manager_file_add_image');
+                Route::get('delete/image/{image}','FileController@delete_image')->name('manager_file_delete_image');
             });
 
             //Settings
@@ -80,7 +84,6 @@ Route::group(['middleware'=>['web']],function (){
                     Route::post('update/{faq}','FaqController@update')->name('management_settings_faq_update');
                     Route::get('delete/{faq}','FaqController@delete')->name('management_settings_faq_delete');
                     Route::get('change/{faq}','FaqController@change')->name('management_settings_faq_change');
-
 
                 });
             });

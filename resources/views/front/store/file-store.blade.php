@@ -48,7 +48,6 @@
             </div>
         </div>
     </div>
-
     <section class="boxes-area">
         <div class="container">
             <div class="row mt-5 ">
@@ -106,6 +105,11 @@
 
     <section class="shop-area ptb-100">
         <div class="container">
+                @if(request()->filled('search'))
+                    <div class="mb-4" style="text-align: right!important;">
+                    <h4 class="text-iranyekan text-primary">نتایج جستجو برای : {{request()->search}}</h4>
+                    </div>
+                @endif
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="woocommerce-topbar">
@@ -118,8 +122,11 @@
                             </div>
                             <div class="col-lg-4 col-md-5">
                                 <div class="woocommerce-topbar-ordering">
-                                    <select>
+                                    <select onchange="location = this.value;">
                                         <option disabled selected>انتخاب دسته بندی</option>
+                                        @foreach($categories as $category)
+                                            <option @if(request()->category == $category->slug) selected @endif value="?category={{$category->slug}}">{{$category->name}}</option>
+                                        @endforeach
 
                                     </select>
                                 </div>
@@ -127,26 +134,66 @@
                         </div>
                     </div>
                     <hr>
+                    @if($files->count() < 1)
+                        @include('includes.store-nodata')
+                        @else
                     <div class="row">
                         @foreach($files as $file)
                         <div class="col-md-3">
                             <div class="single-product-box shadow">
                                 <div class="product-image">
-                                    <a href="#">
+                                    <a href="{{route('front.file.store.show',['file'=>$file->code])}}">
                                         <img src="{{asset('template/img/bg/file-lock.svg')}}" alt="image">
                                     </a>
-                                    <span class="sale-btn"></span>
+                                    @if(!empty($file->sale))<span class="sale-btn">{{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price) - \Illuminate\Support\Facades\Crypt::decrypt($file->sale))}} تومان تخفیف</span>@endif
                                 </div>
                                 <div class="product-content">
-                                    <h5><a href="#">{{$file->name}}</a></h5>
-                                    <p>{{$file->service->name}}</p>
+                                    <h5><a href="{{route('front.file.store.show',['file'=>$file->code])}}">{{$file->name}}</a></h5>
+                                    <p>@if($file->service_id != null){{$file->service->name}}@endif</p>
                                     <span class="price">{{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price))}} تومان</span>
-                                    <a href="#" class="add-to-cart-btn"><i class="fas fa-download"></i> دریافت</a>
+                                    <a href="{{route('front.file.store.show',['file'=>$file->code])}}" class="add-to-cart-btn"><i class="fas fa-download"></i> دریافت</a>
                                 </div>
                             </div>
                         </div>
                         @endforeach
                     </div>
+                    @endif
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <hr>
+                    <div class="woocommerce-topbar">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 col-md-7">
+                                <div class="woocommerce-result-count">
+                                    <h3 class="text-iranyekan"><i class="fas fa-star text-warning"></i> فایل های ویژه</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if($specials->count() < 1)
+                        @include('includes.store-nodata')
+                        @else
+                    <div class="row">
+                        @foreach($specials as $file)
+                        <div class="col-md-3">
+                            <div class="single-product-box shadow">
+                                <div class="product-image">
+                                    <a href="{{route('front.file.store.show',['file'=>$file->code])}}">
+                                        <img src="{{asset('template/img/bg/file-lock.svg')}}" alt="image">
+                                    </a>
+                                    @if(!empty($file->sale))<span class="sale-btn">{{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price) - \Illuminate\Support\Facades\Crypt::decrypt($file->sale))}} تومان تخفیف</span>@endif
+                                </div>
+                                <div class="product-content">
+                                    <h5><a href="{{route('front.file.store.show',['file'=>$file->code])}}">{{$file->name}}</a></h5>
+                                    <p>@if($file->service_id != null){{$file->service->name}}@endif</p>
+                                    <span class="price">@if(!empty($file->sale)){{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->sale))}} @else {{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price))}}@endif تومان</span>
+                                    <a href="{{route('front.file.store.show',['file'=>$file->code])}}" class="add-to-cart-btn"><i class="fas fa-download"></i> دریافت</a>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                        @endif
                 </div>
             </div>
         </div>

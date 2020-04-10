@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Management;
 
 use App\File;
+use App\File_image;
 use App\Http\Controllers\Controller;
 use App\Service;
 use Carbon\Carbon;
@@ -37,7 +38,7 @@ class FileController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'service_id'=>'nullable|numeric',
+            'service_id'=>'required|numeric',
             'name'=>'required',
             'price'=>'required|numeric|min:1',
             'sale'=>'nullable|numeric',
@@ -86,7 +87,7 @@ class FileController extends Controller
     public function update(File $file,Request $request)
     {
         $this->validate($request,[
-            'service_id'=>'nullable|numeric',
+            'service_id'=>'required|numeric',
             'name'=>'required',
             'price'=>'required|numeric|min:1',
             'sale'=>'nullable|numeric',
@@ -117,8 +118,8 @@ class FileController extends Controller
                 $extension=null;
             }
         }else{
-            $extension=null;
-            $path=null;
+            $extension=$file->extension;
+            $path=$file->file;
         }
         $file->update([
             'user_id'=>auth()->id(),
@@ -158,6 +159,43 @@ class FileController extends Controller
             $file->update(['is_special'=>1]);
             alert_message('حالت ویژه فایل فعال شد','success');
         }
+        return back();
+    }
+
+    public function download(File $file)
+    {
+        $name=$file->code.'.'.$file->extension;
+        return Storage::download($file->file,$name);
+    }
+
+    public function add_image(File $file,Request $request)
+    {
+        $this->validate($request,[
+           'image'=>'required|image'
+        ]);
+
+        if ($request->file('image')->isValid()){
+            $path = Storage::put('public/files/preview/',$request->file('image'));
+
+        }else{
+            $path=null;
+        }
+        $file->images()->create([
+           'user_id'=>auth()->id(),
+            'image'=>$path,
+        ]);
+        alert_message('تصویر جدید برای فایل اضافه شد','success');
+        return back();
+    }
+
+    public function delete_image(File_image $image)
+    {
+        if (!empty($image->image))
+        {
+            Storage::delete($image->image);
+        }
+        $image->delete();
+        alert_message('تصویر فایل باموفقیت حذف شد','success');
         return back();
     }
 }

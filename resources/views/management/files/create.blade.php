@@ -33,7 +33,6 @@
                     <div class="form-group">
                         <label for="">انتخاب دسته بندی</label>
                         <select name="service_id" class="browser-default" id="">
-                            <option></option>
                             @foreach($services as $service)
                                 <option value="{{$service->id}}">{{$service->name}}</option>
                             @endforeach

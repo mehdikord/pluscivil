@@ -56,7 +56,7 @@
                         @foreach($files as $file)
                             <tr>
                                 <td>{{$file->name}}</td>
-                                <td>{{$file->service->name}}</td>
+                                <td>@if($file->service_id != null){{$file->service->name}}@endif</td>
                                 <td>{{$file->code}}</td>
                                 <td>{{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price))}}</td>
                                 <td>@if($file->sale != null){{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->sale))}}@endif</td>
@@ -86,7 +86,71 @@
                                     <a  title="گزارش گیری" type="button" class="btn btn-danger btn-circle waves-effect waves-circle waves-float">
                                         <i class="fas fa-chart-line"></i>
                                     </a>
-                                    <a  title="دریافت فایل" type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float">
+                                    <button data-toggle="modal" data-target="#images_{{$file->id}}" title="تصاویر پیش نمایش" type="button" class="btn btn-warning btn-circle waves-effect waves-circle waves-float">
+                                        <i class="fas fa-images"></i>
+                                    </button>
+
+                                    <div class="modal fade" id="images_{{$file->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg " role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalCenterTitle">تصاویر پیش نمایش : {{$file->name}}</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <button class="btn btn-info btn-border-radius waves-effect m-b-15" type="button"
+                                                            data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                                            aria-controls="collapseExample">
+                                                        افزودن تصویر جدید
+                                                    </button>
+                                                    <div class="collapse" id="collapseExample">
+                                                        <div class="well">
+                                                            <form action="{{route('manager_file_add_image',['file'=>$file->id])}}" method="post" enctype="multipart/form-data">
+                                                                @csrf
+                                                                <div class="form-group">
+                                                                    <label for="">انتخاب فایل</label>
+                                                                    <input class="form-control" type="file" name="image" id="">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <button class="btn btn-success">افزودن تصویر</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <h5 class="text-iranyekan">لیست تصاویر فایل</h5>
+                                                    <div class="mt-3">
+                                                        @if($file->images()->count() < 1)
+                                                            <div class="text-center mt-4">
+                                                                <img src="{{asset('management/images/no-data.svg')}}" width="300" alt="">
+                                                                <h5 class="mt-2">هنوز هیچ تصویری ثبت نشده است !</h5>
+                                                            </div>
+                                                            @else
+                                                            <div class="row">
+                                                                @foreach($file->images as $image)
+                                                                    <div class="col-md-4">
+                                                                        <div class="card border">
+                                                                            <div class="card-body p-0">
+                                                                                <img src="{{asset(\Illuminate\Support\Facades\Storage::url($image->image))}}" width="300" alt="">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <button onclick="del_img({{$image->id}})" class="btn btn-danger btn-circle"><i class="fas fa-trash"></i></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                @endforeach
+                                                            </div>
+
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn bg-red" data-dismiss="modal">بستن</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <a href="{{route('manager_file_download',['file'=>$file->id])}}" target="_blank" title="دریافت فایل" type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float">
                                         <i class="fas fa-download"></i>
                                     </a>
                                 </td>
@@ -117,9 +181,23 @@
                 cancelButtonColor:"#31ff32",
                 closeOnConfirm: false
             }, function () {
-                window.open('/management/services/delete/'+id,'_self');
+                window.open('/management//delete/'+id,'_self');
             });
-
+        }
+        function del_img(id) {
+            swal({
+                title: "هشدار",
+                text: "آیا مطمئن هستید تصویر فایل حذف شود ؟",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#31ff32",
+                confirmButtonText: "بله",
+                cancelButtonText:"خیر",
+                cancelButtonColor:"#31ff32",
+                closeOnConfirm: false
+            }, function () {
+                window.open('/management/files/delete/image/'+id,'_self');
+            });
         }
     </script>
 @endsection
