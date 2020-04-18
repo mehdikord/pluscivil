@@ -40,7 +40,7 @@ class FileController extends Controller
         $this->validate($request,[
             'service_id'=>'required|numeric',
             'name'=>'required',
-            'price'=>'required|numeric|min:1',
+            'price'=>'nullable|numeric|min:1',
             'sale'=>'nullable|numeric',
             'is_active'=>'numeric',
             'is_special'=>'numeric',
@@ -51,6 +51,12 @@ class FileController extends Controller
             $sale  = Crypt::encrypt($request->sale);
         }else{
             $sale=null;
+        }
+        if ($request->filled('price'))
+        {
+            $price  = Crypt::encrypt($request->price);
+        }else{
+            $price=null;
         }
         $code = auth()->id().rand(100000000,9999999999);
         if ($request->file('file')->isValid())
@@ -66,7 +72,7 @@ class FileController extends Controller
             'token'=>$token,
             'file'=>"private/".$path,
             'extension'=>$request->file('file')->extension(),
-            'price'=>Crypt::encrypt($request->price),
+            'price'=>$price,
             'sale'=>$sale,
             'description'=>$request->description,
             'is_active'=>$request->is_active,
@@ -89,7 +95,7 @@ class FileController extends Controller
         $this->validate($request,[
             'service_id'=>'required|numeric',
             'name'=>'required',
-            'price'=>'required|numeric|min:1',
+            'price'=>'nullable|numeric|min:1',
             'sale'=>'nullable|numeric',
             'is_active'=>'numeric',
             'is_special'=>'numeric',
@@ -100,6 +106,12 @@ class FileController extends Controller
             $sale  = Crypt::encrypt($request->sale);
         }else{
             $sale=null;
+        }
+        if ($request->filled('price'))
+        {
+            $price  = Crypt::encrypt($request->price);
+        }else{
+            $price=null;
         }
         if ($request->filled('file'))
         {
@@ -127,7 +139,7 @@ class FileController extends Controller
             'name'=>$request->name,
             'file'=>$path,
             'extension'=>$extension,
-            'price'=>Crypt::encrypt($request->price),
+            'price'=>$price,
             'sale'=>$sale,
             'description'=>$request->description,
             'is_active'=>$request->is_active,

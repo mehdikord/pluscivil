@@ -58,7 +58,7 @@
                                 <td>{{$file->name}}</td>
                                 <td>@if($file->service_id != null){{$file->service->name}}@endif</td>
                                 <td>{{$file->code}}</td>
-                                <td>{{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price))}}</td>
+                                <td>@if($file->price != null){{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price))}}@else رایگان @endif</td>
                                 <td>@if($file->sale != null){{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->sale))}}@endif</td>
                                 <td class="text-center">
                                     @if($file->is_active == 1)
@@ -77,7 +77,7 @@
                                 <td>{{$file->extension}}</td>
                                 <td>{{\Morilog\Jalali\Jalalian::fromDateTime($file->created_at)->format("Y/m/d-H:i:s")}}</td>
                                 <td>
-                                    <a  title="مشاهده" type="button" class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
+                                    <a href="{{route('front.file.store.show',['file'=>$file->code])}}" target="_blank" title="مشاهده" type="button" class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
                                         <i class="fas fa-eye"></i>
                                     </a>
                                     <a href="{{route('manager_file_edit',['file'=>$file->id])}}" title="ویرایش" type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float">

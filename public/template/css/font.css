@@ -61,7 +61,6 @@
     src: url(../fonts/iranyekan/eot/iranyekanwebmediumfanum.eot);
     src: url(../fonts/iranyekan/eot/iranyekanwebmediumfanum.eot?#iefix) format("embedded-opentype"), url(../fonts/iranyekan/woff/iranyekanwebmediumfanum.woff) format("woff"), url(../fonts/iranyekan/ttf/iranyekanwebmediumfanum.ttf) format("truetype")
 }
-
 body,h1,h2,h3,h4,h5,h6,button,p,div {
     font-family: IRANSans !important;
 }
@@ -98,6 +97,14 @@ body,h1,h2,h3,h4,h5,h6,button,p,div {
 }
 .active{
     text-decoration: none!important;
+}
+.font-22
+{
+    font-size: 22px!important;
+}
+.font-20
+{
+    font-size: 20px!important;
 }
 .font-18
 {

@@ -278,8 +278,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-12">
                     <div class="cta-content">
-                        <h3>چطوری با در ارتباط باشید ؟</h3>
-                        <a href="#">09111232525</a>
+                        <h3>چطوری با ما در ارتباط باشید ؟</h3>
+                        <a href="#">0911-877-4842</a>
                     </div>
                 </div>
 
