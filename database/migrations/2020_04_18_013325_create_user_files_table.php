@@ -16,8 +16,10 @@ class CreateUserFilesTable extends Migration
         Schema::create('user_files', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('file_id')
+            $table->unsignedBigInteger('file_id');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('file_id')->references('id')->on('files')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

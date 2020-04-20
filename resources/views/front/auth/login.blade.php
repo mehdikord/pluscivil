@@ -12,7 +12,9 @@
     <!-- Custom Css -->
     <link href="{{asset('management/css/style.css')}}" rel="stylesheet" />
     <link href="{{asset('management/css/pages/extra_pages.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('sweetalert2/dist/sweetalert2.min.css')}}">
     <link href="{{asset('template/css/font.css')}}" rel="stylesheet" />
+
 </head>
 <body>
 <div class="limiter">
@@ -20,6 +22,7 @@
         <div class="wrap-login100">
             <form action="{{route('login')}}" method="post" class="login100-form validate-form">
                 @csrf
+                <h3 class="text-iranyekan text-right">پلاس عمران</h3>
                 <div class="login100-form-logo">
                     <div class="image">
                         <img src="{{asset('management/images/admin-user.svg')}}" alt="User">
@@ -52,7 +55,12 @@
                             گذرواژه خود را فراموش کردید ؟
                         </a>
                         <br>
-                        <a class="btn btn-danger mt-3" href="">بازگشت</a>
+                        <br>
+                        <a href="{{route('register')}}" class="txt1 text-iranyekan font-18">
+                            ثبت نام کنید
+                        </a>
+                        <br>
+                        <a class="btn btn-danger mt-3" href="{{route('index')}}">بازگشت</a>
                     </div>
                 </div>
 
@@ -66,5 +74,8 @@
 
 <script src="{{asset('management/js/app.min.js')}}"></script>
 <script src="{{asset('management/js/pages/examples/pages.js')}}"></script>
+<script src="{{asset('sweetalert2/dist/sweetalert2.all.min.js')}}"></script>
+@include('includes.alert_message')
+@include('includes.simple_message')
 </body>
 </html>

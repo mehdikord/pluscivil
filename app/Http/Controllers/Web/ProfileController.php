@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function profile()
+    public function __construct()
     {
-        return view('front.profile.profile');
+        $this->middleware('auth');
+    }
+
+    public function dashboard()
+    {
+        return view('front.profile.dashboard');
     }
 }

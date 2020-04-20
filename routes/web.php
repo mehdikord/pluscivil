@@ -24,7 +24,6 @@ Route::group(['middleware'=>['web']],function (){
         Route::post('login','LoginController@login')->name('login');
         Route::get('logout','LoginController@logout')->name('logout');
         Route::post('/register-send','RegisterController@register')->name('register-send');
-
     });
 
     //Front Routing
@@ -32,12 +31,19 @@ Route::group(['middleware'=>['web']],function (){
         Route::get('/','PageController@index')->name('index');
         Route::get('/login','PageController@login')->name('front_login');
         Route::get('/register','PageController@register')->name('register');
-        Route::get('/profile','ProfileController@profile')->name('profile');
 
         //file store
         Route::get('store','PageController@file_store')->name('front.file.store');
         Route::get('store/file/{file}','PageController@show_file')->name('front.file.store.show');
+        Route::get('store/file/download/free/{file}','FileController@download_free')->name('front.file.store.download.free');
+
+        //profile
+        Route::prefix('profile')->group(function (){
+            Route::get('dashboard','ProfileController@dashboard')->name('front.profile.dashboard');
+        });
+
     });
+
 
     //Management Routing
     Route::namespace('Management')->group(function (){

@@ -35,6 +35,11 @@
     <title>@yield('title')</title>
 
     <link rel="icon" type="image/png" href="{{asset('template/img/favicon.png')}}">
+    <style>
+        .swal2-select{
+            display: none!important;
+        }
+    </style>
     @yield('head')
 </head>
 
@@ -62,7 +67,7 @@
                     <div class="top-header-right">
                         <div class="login-signup-btn">
                             @if(auth()->check())
-                                <p><a href="{{route('profile')}}" class="text-white"><i class="fas fa-user"></i> پروفایل کاربری</a><span> - </span> <a href="{{route('logout')}}" class="text-warning"><i class="fas fa-times"></i> خروج</a></p>
+                                <p><a href="{{route('front.profile.dashboard')}}" class="text-white"><i class="fas fa-user"></i> پروفایل کاربری</a><span> - </span> <a href="{{route('logout')}}" class="text-warning"><i class="fas fa-times"></i> خروج</a></p>
                                 @else
                             <p><a href="{{route('front_login')}}">ورود به حساب</a> <span>یا</span> <a href="{{route('register')}}">ثبت نام</a></p>
                             @endif
@@ -123,8 +128,12 @@
 {{--                                    <li class="nav-item"><a href="blog-1.html" class="nav-link">شبكة بلوق</a></li>--}}
                                 </ul>
                             </li>
-
                             <li class="nav-item"><a href="contact.html" class="nav-link">تماس با ما</a></li>
+                            @if(auth()->check())
+                                <li>
+                                    <a href="{{route('front.profile.dashboard')}}" class="btn btn-info"><i class="fa fa-user"></i> پروفایل کاربری</a>
+                                </li>
+                            @endif
                         </ul>
 
                     </div>

@@ -20,6 +20,7 @@
         <div class="wrap-login100">
             <form action="{{route('register-send')}}" method="post" class="login100-form validate-form">
                 @csrf
+                <h3 class="text-iranyekan text-right">پلاس عمران</h3>
                 <div class="login100-form-logo">
                     <div class="image">
                         <img src="{{asset('management/images/admin-user.svg')}}" alt="User">
@@ -62,7 +63,12 @@
 
                 <div class="w-full p-t-15 p-b-15 text-center">
                     <div>
-                        <a class="btn btn-danger" href="">بازگشت</a>
+                        <a href="{{route('front_login')}}" class="txt1 text-iranyekan font-18">
+                            قبلا ثبت نام کردید
+                        </a>
+                        <br>
+                        <br>
+                        <a class="btn btn-danger" href="{{route('index')}}">بازگشت</a>
                     </div>
                 </div>
 

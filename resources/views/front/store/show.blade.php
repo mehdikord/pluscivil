@@ -84,13 +84,20 @@
                         <p class="mt-3 text-justify">{{$file->description}}</p>
                         <div class="buy-checkbox-btn">
                             <div class="item">
-                                <a href="#" class="buy-btn text-iranyekan">@if($file->price == null && $file->sale == null) دریافت فایل <i></i>@else پرداخت و دریافت @endif</a>
+                                    @if($file->price == null && $file->sale == null)
+                                    <a href="{{route('front.file.store.download.free',['file'=>$file->code])}}" class="buy-btn text-iranyekan">
+                                        دریافت فایل <i class="fa fa-download"></i>
+                                    </a>
+                                    @else
+                                    <a href="#" class="buy-btn text-iranyekan">
+                                    پرداخت و دریافت
+                                    </a>
+                                    @endif
                             </div>
                         </div>
 
                     </div>
                 </div>
-
 
                 <div class="col-lg-12 col-md-12">
                     <div class="tab products-details-tab">

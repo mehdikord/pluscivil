@@ -156,8 +156,5 @@ return array(
         "portfolio_id"=>'نمونه کار ',
         "logo"=>' لوگو',
         "num"=>' شماره کاربر',
-        'national_code'=>'کد ملی',
-        'main_category'=>'دسته بندی اصلی',
-        'sub_category'=>'دسته بندی فرعی (زیر مجموعه)'
     ),
 );

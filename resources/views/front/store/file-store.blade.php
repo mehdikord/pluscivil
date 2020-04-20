@@ -150,7 +150,7 @@
                                 <div class="product-content">
                                     <h5><a href="{{route('front.file.store.show',['file'=>$file->code])}}">{{$file->name}}</a></h5>
                                     <p>@if($file->service_id != null){{$file->service->name}}@endif</p>
-                                    <span class="price">{{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price))}} تومان</span>
+                                    <span class="price">@if(!empty($file->sale) && !empty($file->price)) @if(!empty($file->sale)){{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->sale))}} @else {{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price))}}@endif تومان @else رایگان @endif</span>
                                     <a href="{{route('front.file.store.show',['file'=>$file->code])}}" class="add-to-cart-btn"><i class="fas fa-download"></i> دریافت</a>
                                 </div>
                             </div>
@@ -186,7 +186,7 @@
                                 <div class="product-content">
                                     <h5><a href="{{route('front.file.store.show',['file'=>$file->code])}}">{{$file->name}}</a></h5>
                                     <p>@if($file->service_id != null){{$file->service->name}}@endif</p>
-                                    <span class="price">@if(!empty($file->sale)){{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->sale))}} @else {{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price))}}@endif تومان</span>
+                                    <span class="price">@if(!empty($file->sale) && !empty($file->price)) @if(!empty($file->sale)){{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->sale))}} @else {{number_format(\Illuminate\Support\Facades\Crypt::decrypt($file->price))}}@endif تومان @else رایگان @endif</span>
                                     <a href="{{route('front.file.store.show',['file'=>$file->code])}}" class="add-to-cart-btn"><i class="fas fa-download"></i> دریافت</a>
                                 </div>
                             </div>
