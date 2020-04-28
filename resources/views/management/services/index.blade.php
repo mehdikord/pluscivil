@@ -100,7 +100,6 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>{{$service->other_name}}</td>
                             <td>
                                 @if($service->price != null)
                                     <div class="badge col-blue font-17">{{number_format(\Illuminate\Support\Facades\Crypt::decrypt($service->price))}}</div>
@@ -111,6 +110,7 @@
                                     <div class="badge col-blue font-18">{{\Illuminate\Support\Facades\Crypt::decrypt($service->sale)}}</div>
                                 @endif
                             </td>
+                            <td>{{$service->other_name}}</td>
                             <td>@if($service->is_special == 1) <i class="fa fa-check fa-2x text-success"></i> @else<i class="fa fa-times fa-2x text-danger"></i>  @endif</td>
                             <td>@if($service->is_product == 1) <i class="fa fa-check fa-2x text-success"></i> @else<i class="fa fa-times fa-2x text-danger"></i>  @endif</td>
                             <td>@if($service->is_public == 1) <i class="fa fa-check fa-2x text-success"></i> @else<i class="fa fa-times fa-2x text-danger"></i>  @endif</td>
@@ -118,9 +118,9 @@
                                 <a href="{{route('manager_service_edit',['service'=>$service->id])}}" title="ویرایش" type="button" class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <button title="مشاهده" type="button" class="btn bg-orange btn-circle waves-effect waves-circle waves-float">
+                                <a href="{{route('front.service.show',['service'=>$service->slug])}}" title="مشاهده" target="_blank" class="btn bg-orange btn-circle waves-effect waves-circle waves-float">
                                     <i class="fas fa-eye"></i>
-                                </button>
+                                </a>
                                 <button onclick="del({{$service->id}})" title="حذف" type="button" class="btn bg-danger btn-circle waves-effect waves-circle waves-float">
                                     <i class="fas fa-trash"></i>
                                 </button>

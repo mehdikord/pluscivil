@@ -50,6 +50,7 @@
             <div class="row">
                 @foreach($main_services as $main_service)
                 <div class="col-lg-4 col-md-6 col-sm-6">
+                    <a href="{{route('front.service.show',['service'=>$main_service->slug])}}">
                     <div class="single-features-box">
                         <div class="icon">
                             @if($main_service->logo != null)
@@ -67,13 +68,14 @@
                             <i class="flaticon-speedometer"></i>
                         </div>
 
-                        <a href="#" class="details-btn"><i class="flaticon-arrow-pointing-to-right"></i></a>
+                        <a href="{{route('front.service.show',['service'=>$main_service->slug])}}" class="details-btn"><i class="flaticon-arrow-pointing-to-right"></i></a>
 
                         <div class="image-box">
                             <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
                             <img src="{{asset('template/img/shape-image/2.png')}}" alt="image">
                         </div>
                     </div>
+                    </a>
                 </div>
                 @endforeach
             </div>

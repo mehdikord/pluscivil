@@ -166,7 +166,7 @@
         <div class="container">
             <p><i class="fas fa-copyright"></i> تمامی حقوق برای پلاس عمران محفوظ است</p>
             <hr class="bg-white w-50">
-            <p><i class="fas fa-laptop-code"></i>  طراحی،توسعه و پشتیبانی <a class="text-white" href="http://mehdikord.ir">Mehdi Kord</a></p>
+            <p><i class="fas fa-laptop-code"></i>  طراحی،توسعه و پشتیبانی <a class="text-white" href="http://tinanet.ir">TinaNet</a></p>
         </div>
     </div>
 </footer>

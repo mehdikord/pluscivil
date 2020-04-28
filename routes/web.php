@@ -42,6 +42,9 @@ Route::group(['middleware'=>['web']],function (){
             Route::get('dashboard','ProfileController@dashboard')->name('front.profile.dashboard');
         });
 
+        //Services
+        Route::get('service/{service}','ServiceController@show')->name('front.service.show');
+
     });
 
 
