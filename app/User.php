@@ -50,4 +50,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(City::class,'city_id');
     }
+
+    public function files()
+    {
+        return $this->hasMany(User_file::class,'user_id');
+    }
 }

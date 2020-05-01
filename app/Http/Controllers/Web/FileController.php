@@ -6,6 +6,7 @@ use App\File;
 use App\Http\Controllers\Controller;
 use App\User_file;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
@@ -22,7 +23,16 @@ class FileController extends Controller
             alert_message('فایل مورد نظر رایگان نمیباشد، لطفا آن را خریداری کنید');
         }else{
             $file->update(['download'=>$file->download + 1]);
-            User_file::updateorcreate(['user_id'=>auth()->id(),'file_id'=>$file->id],['user_id'=>auth()->id(),'file_id'=>$file->id]);
+            if (!empty($file->price))
+            {
+                $price = Crypt::decrypt($file->price);
+            }elseif (!empty($file->sale)){
+                $price = Crypt::decrypt($file->sale);
+            }else{
+                $price = 'رایگان';
+
+            }
+            User_file::updateorcreate(['user_id'=>auth()->id(),'file_id'=>$file->id],['user_id'=>auth()->id(),'file_id'=>$file->id,'price'=>$price]);
             $name=$file->code.'.'.$file->extension;
             return Storage::download($file->file,$name);
 

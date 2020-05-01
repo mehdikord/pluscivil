@@ -10,6 +10,9 @@
             border-radius: 50%;
             border: 1.7px solid #f66b46;
         }
+        .bg-orange{
+            background-color: #ff581f !important;
+        }
     </style>
 
 @endsection
@@ -28,40 +31,7 @@
     <section class="mt-5 mb-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="text-center mt-4 mb-3">
-                            <img class="profile-image" src="@if(!empty(auth()->user()->profile)) {{asset(auth()->user()->profile)}} @else {{asset('management/images/admin-user.svg')}} @endif" alt="">
-                            <h5 class="mt-3 text-iranyekan">{{auth()->user()->name}}</h5>
-                        </div>
-                    </div>
-                    <div class="card-body p-0">
-                        <ul class="list-group p-0 text-right text-iranyekan">
-                            <a href="{{route('front.profile.dashboard')}}">
-                            <li class="list-group-item @if(\Illuminate\Support\Facades\Request::is('profile/dashboard')) active @endif ">
-                                <i class="fas fa-tachometer-alt"></i> داشبورد
-                            </li>
-                            </a>
-                            <a href="{{route('front.profile.dashboard')}}">
-                                <li class="list-group-item @if(\Illuminate\Support\Facades\Request::is('profile/files')) active @endif ">فایل ها</li>
-                            </a>
-                            <a href="">
-                                <li class="list-group-item @if(\Illuminate\Support\Facades\Request::is('profile/orders')) active @endif ">سفارشات</li>
-                            </a>
-                            <a href="">
-                                <li class="list-group-item @if(\Illuminate\Support\Facades\Request::is('profile/pays')) active @endif ">پرداخت ها</li>
-                            </a>
-                            <a href="">
-                                <li class="list-group-item @if(\Illuminate\Support\Facades\Request::is('profile/invoices')) active @endif ">فاکتورها</li>
-                            </a>
-                            <a href="">
-                                <li class="list-group-item @if(\Illuminate\Support\Facades\Request::is('profile/edit')) active @endif ">ویرایش اطلاعات</li>
-                            </a>
-                        </ul>
-                    </div>
-                </div>
-                </div>
+               @include('components.profile-menu')
                 <div class="col-md-9">
                     <div class="card">
                         <div class="card-header text-right">
@@ -95,7 +65,47 @@
                             </div>
                             <hr>
                             <div class="mt-4">
-
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card bg-success">
+                                            <div class="card-body">
+                                                <div class="float-left">
+                                                    <i class="fa fa-file fa-3x text-white"></i>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <h5 class="text-iranyekan text-white">فایل ها</h5>
+                                                    <h4 class="text-white">{{auth()->user()->files()->count()}}</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card bg-orange">
+                                            <div class="card-body">
+                                                <div class="float-left">
+                                                    <i class="fa fa-building fa-3x text-white"></i>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <h5 class="text-iranyekan text-white">پروژه ها</h5>
+                                                    <h4 class="text-white">0</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card bg-dark">
+                                            <div class="card-body">
+                                                <div class="float-left">
+                                                    <i class="fa fa-building fa-3x text-white"></i>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <h5 class="text-iranyekan text-white">فاکتور ها</h5>
+                                                    <h4 class="text-white">0</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

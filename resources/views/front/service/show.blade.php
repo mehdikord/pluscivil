@@ -101,7 +101,7 @@
                             <li>لطفا در هنگام ثبت سفارش تمامی اطلاعات خواسته شده را به دقت کامل کنید</li>
                         </ul>
 
-                        <a href="#" class="btn btn-primary text-iranyekan">ثبت سفارش {{$service->name}}</a>
+                        <a href="{{route('front.service.request.order',['service'=>$service->slug])}}" class="btn btn-primary text-iranyekan">ثبت سفارش {{$service->name}}</a>
                     </div>
                 </div>
 

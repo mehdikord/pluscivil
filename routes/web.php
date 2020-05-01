@@ -40,10 +40,16 @@ Route::group(['middleware'=>['web']],function (){
         //profile
         Route::prefix('profile')->group(function (){
             Route::get('dashboard','ProfileController@dashboard')->name('front.profile.dashboard');
+            Route::get('files','ProfileController@files')->name('front.profile.files');
+            Route::get('files/request/download/{file}','ProfileController@files_request_download')->name('front.profile.files.request.download');
         });
 
         //Services
-        Route::get('service/{service}','ServiceController@show')->name('front.service.show');
+        Route::prefix('service')->group(function (){
+            Route::get('{service}','ServiceController@show')->name('front.service.show');
+            Route::get('request/order/{service}','ServiceController@request_order')->name('front.service.request.order');
+
+        });
 
     });
 
