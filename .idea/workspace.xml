@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b63763a-73a2-457d-955e-0336b842d9d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_01_034131_add_new_field_into_user_files.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/management/images/ordering.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/profile-menu.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/profile/files.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/service/request-order.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Management/RequestController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_05_173905_create_requests_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_05_174911_create_invoices_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/management/requests/new.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/FileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Management/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Management/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/ServiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/profile/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/profile/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/service/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/service/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/admin-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin-menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/service/request-order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/service/request-order.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/management/users/admins.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/management/users/admins.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,22 +161,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowDatabase.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/template/img" />
-      <recent name="$PROJECT_DIR$/public/template/img/bg" />
-      <recent name="$PROJECT_DIR$/public/management/images" />
-      <recent name="$PROJECT_DIR$/resources/views/front/auth" />
-      <recent name="$PROJECT_DIR$/resources/views/front" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/lang" />
       <recent name="$PROJECT_DIR$/public/management/images" />
       <recent name="$PROJECT_DIR$/resources/views/includes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/management/images" />
+      <recent name="$PROJECT_DIR$/public/template/img" />
+      <recent name="$PROJECT_DIR$/public/template/img/bg" />
+      <recent name="$PROJECT_DIR$/resources/views/front/auth" />
+      <recent name="$PROJECT_DIR$/resources/views/front" />
     </key>
   </component>
   <component name="RunManager">
@@ -242,7 +240,13 @@
       <workItem from="1588015926673" duration="183000" />
       <workItem from="1588090677363" duration="592000" />
       <workItem from="1588100796555" duration="10387000" />
-      <workItem from="1588276975242" duration="12401000" />
+      <workItem from="1588276975242" duration="12498000" />
+      <workItem from="1588354486254" duration="426000" />
+      <workItem from="1588374724043" duration="24000" />
+      <workItem from="1588526106308" duration="684000" />
+      <workItem from="1588597241166" duration="2422000" />
+      <workItem from="1588619550707" duration="1682000" />
+      <workItem from="1588684032169" duration="8530000" />
     </task>
     <servers />
   </component>
@@ -257,23 +261,23 @@
       <screen x="0" y="30" width="1280" height="994" />
     </state>
     <state x="403" y="314" key="#com.intellij.fileTypes.FileTypeChooser/0.30.1280.994@0.30.1280.994" timestamp="1585860949198" />
-    <state x="2383" y="270" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587417514466">
-      <screen x="1920" y="0" width="1280" height="1024" />
+    <state x="695" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1588689450351">
+      <screen x="0" y="36" width="1920" height="1044" />
     </state>
     <state x="463" y="292" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1280.994@0.30.1280.994" timestamp="1584903287589" />
-    <state x="695" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1584444946745" />
+    <state x="695" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1588689450351" />
     <state x="2383" y="270" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1280.1024/0.30.1920.1050@1920.0.1280.1024" timestamp="1587417514466" />
-    <state x="2417" y="270" key="FileChooserDialogImpl" timestamp="1588111751020">
-      <screen x="1920" y="0" width="1280" height="1024" />
+    <state x="745" y="311" key="FileChooserDialogImpl" timestamp="1588691392509">
+      <screen x="0" y="36" width="1920" height="1044" />
     </state>
     <state x="497" y="292" key="FileChooserDialogImpl/0.30.1280.994@0.30.1280.994" timestamp="1586017393998" />
-    <state x="745" y="311" key="FileChooserDialogImpl/0.36.1920.1044@0.36.1920.1044" timestamp="1586596033629" />
-    <state x="2417" y="270" key="FileChooserDialogImpl/1920.0.1280.1024/0.30.1920.1050@1920.0.1280.1024" timestamp="1588111751020" />
-    <state x="2439" y="431" key="NewPhpFileDialog" timestamp="1588292414404">
-      <screen x="1920" y="0" width="1280" height="1024" />
+    <state x="745" y="311" key="FileChooserDialogImpl/0.36.1920.1044@0.36.1920.1044" timestamp="1588691392509" />
+    <state x="2417" y="270" key="FileChooserDialogImpl/1920.0.1280.1024/0.30.1920.1050@1920.0.1280.1024" timestamp="1588621231639" />
+    <state x="779" y="475" key="NewPhpFileDialog" timestamp="1588689252267">
+      <screen x="0" y="36" width="1920" height="1044" />
     </state>
     <state x="519" y="448" key="NewPhpFileDialog/0.30.1280.994@0.30.1280.994" timestamp="1585950014917" />
-    <state x="779" y="475" key="NewPhpFileDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1586546564607" />
+    <state x="779" y="475" key="NewPhpFileDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1588689252267" />
     <state x="2439" y="431" key="NewPhpFileDialog/1920.0.1280.1024/0.30.1920.1050@1920.0.1280.1024" timestamp="1588292414404" />
     <state x="2197" y="149" key="SettingsEditor" timestamp="1588101340682">
       <screen x="1920" y="0" width="1280" height="1024" />
@@ -281,21 +285,22 @@
     <state x="277" y="175" key="SettingsEditor/0.30.1280.994@0.30.1280.994" timestamp="1585081475441" />
     <state x="458" y="188" key="SettingsEditor/0.36.1920.1044@0.36.1920.1044" timestamp="1586536493351" />
     <state x="2197" y="149" key="SettingsEditor/1920.0.1280.1024/0.30.1920.1050@1920.0.1280.1024" timestamp="1588101340682" />
-    <state x="307" y="241" width="665" height="570" key="find.popup" timestamp="1585351818397">
-      <screen x="0" y="30" width="1280" height="994" />
+    <state x="2227" y="217" width="665" height="588" key="find.popup" timestamp="1588374739995">
+      <screen x="1920" y="0" width="1280" height="1024" />
     </state>
     <state x="307" y="241" width="665" height="570" key="find.popup/0.30.1280.994@0.30.1280.994" timestamp="1585351818397" />
+    <state x="2227" y="217" width="665" height="588" key="find.popup/1920.0.1280.1024/0.30.1920.1050@1920.0.1280.1024" timestamp="1588374739995" />
     <state x="2334" y="214" width="672" height="677" key="run.anything.popup" timestamp="1587422441434">
       <screen x="1920" y="0" width="1280" height="1024" />
     </state>
     <state x="414" y="238" key="run.anything.popup/0.30.1280.994@0.30.1280.994" timestamp="1585945763885" />
     <state x="621" y="254" key="run.anything.popup/0.36.1920.1044@0.36.1920.1044" timestamp="1584214226387" />
     <state x="2334" y="214" width="672" height="677" key="run.anything.popup/1920.0.1280.1024/0.30.1920.1050@1920.0.1280.1024" timestamp="1587422441434" />
-    <state x="2335" y="223" width="672" height="666" key="search.everywhere.popup" timestamp="1588292335192">
-      <screen x="1920" y="0" width="1280" height="1024" />
+    <state x="623" y="263" width="672" height="678" key="search.everywhere.popup" timestamp="1588691579178">
+      <screen x="0" y="36" width="1920" height="1044" />
     </state>
     <state x="415" y="246" width="672" height="646" key="search.everywhere.popup/0.30.1280.994@0.30.1280.994" timestamp="1586118500733" />
-    <state x="623" y="263" width="672" height="678" key="search.everywhere.popup/0.36.1920.1044@0.36.1920.1044" timestamp="1586555884310" />
+    <state x="623" y="263" width="672" height="678" key="search.everywhere.popup/0.36.1920.1044@0.36.1920.1044" timestamp="1588691579178" />
     <state x="2335" y="223" width="672" height="666" key="search.everywhere.popup/1920.0.1280.1024/0.30.1920.1050@1920.0.1280.1024" timestamp="1588292335192" />
     <state x="367" y="429" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1586019786829">
       <screen x="0" y="30" width="1280" height="994" />
@@ -309,10 +314,6 @@
           <url>file://$PROJECT_DIR$/resources/views/management/services/index.blade.php</url>
           <line>31</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Management/ServiceController.php</url>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/front/index.blade.php</url>

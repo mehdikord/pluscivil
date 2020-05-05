@@ -48,6 +48,7 @@ Route::group(['middleware'=>['web']],function (){
         Route::prefix('service')->group(function (){
             Route::get('{service}','ServiceController@show')->name('front.service.show');
             Route::get('request/order/{service}','ServiceController@request_order')->name('front.service.request.order');
+            Route::post('request/order/store/{service}','ServiceController@request_order_store')->name('front.service.request.order.store');
 
         });
 
@@ -65,6 +66,7 @@ Route::group(['middleware'=>['web']],function (){
                 Route::get('index','UserController@admins_index')->name('management_admins_index');
                 Route::post('store','UserController@admins_store')->name('management_admins_store');
                 Route::post('update/{admin}','UserController@admins_update')->name('management_admins_update');
+                Route::get('delete/{admin}','UserController@admins_delete')->name('management_admins_delete');
             });
 
             //Services
@@ -101,6 +103,11 @@ Route::group(['middleware'=>['web']],function (){
                     Route::get('change/{faq}','FaqController@change')->name('management_settings_faq_change');
 
                 });
+            });
+
+            //Requests
+            Route::prefix('requests')->group(function (){
+                Route::get('new','RequestController@new')->name('admin_requests_new');
             });
 
 

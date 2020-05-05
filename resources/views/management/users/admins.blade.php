@@ -163,7 +163,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="">استان</label>
-                                                            ‌<select name="province_id" class="browser-default"  id="province">
+                                                            ‌<select name="province_id" class="browser-default"  id="province_{{$user->id}}">
                                                                 <option disabled selected>استان مورد نظر را انتخاب کنید</option>
                                                                 @foreach($provinces as $province)
                                                                     <option @if($user->province_id == $province->id) selected @endif value="{{$province->id}}">{{$province->name}}</option>
@@ -172,12 +172,14 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="">شهر</label>
-                                                            ‌<select  name="city_id" class="browser-default"  id="city">
+                                                            ‌<select  name="city_id" class="browser-default"  id="city_{{$user->id}}">
                                                                 @if($user->city_id != null)
                                                                     <option value="{{$user->city_id}}">{{$user->city->name}}</option>
                                                                 @endif
                                                             </select>
                                                         </div>
+
+
                                                         <div class="form-group">
                                                             <label for="">سطح مدیریتی</label>
                                                             ‌<select name="‌‌‌role_id" class="browser-default"  id="">
@@ -212,6 +214,25 @@
 @endsection
 @section('script')
     <script>
+        @foreach($users as $user)
+        $('#province_{{$user->id}}').change(function () {
+            var url = '/api/get/cities/' + $(this).val();
+            console.log("url:" + url);
+            $.get(url, function (data) {
+                    var select = $('#city_{{$user->id}}');
+                    select.empty();
+                    if (data.length != 0) {
+                        $.each(data, function (key, value) {
+                            select.append('<option value=' + value.id + '>' + value.name + '</option>');
+                        });
+                    } else {
+                        select.append('<option value= "-1" ></option>');
+                    }
+                }
+            );
+        });
+
+        @endforeach
         $('#province').change(function () {
             var url = '/api/get/cities/' + $(this).val();
             console.log("url:" + url);

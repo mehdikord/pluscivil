@@ -29,6 +29,17 @@
         </li>
     </ul>
 </li>
+<li class="@if(\Illuminate\Support\Facades\Request::is('management/requests*')) active @endif">
+    <a href="#" onClick="return false;" class="menu-toggle">
+        <i class="fas fa-envelope"></i>
+        <span>درخواست ها</span>
+    </a>
+    <ul class="ml-menu">
+        <li class="@if(\Illuminate\Support\Facades\Request::is('management/requests/new')) active @endif">
+            <a href="{{route('admin_requests_new')}}">درخواست های جدید</a>
+        </li>
+    </ul>
+</li>
 <li class="@if(\Illuminate\Support\Facades\Request::is('management/files*')) active @endif">
     <a href="#" onClick="return false;" class="menu-toggle">
         <i class="fas fa-store"></i>

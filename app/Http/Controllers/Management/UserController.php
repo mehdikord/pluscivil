@@ -74,4 +74,12 @@ class UserController extends Controller
         alert_message('اطلاعات مدیر مورد نظر با موفقیت ایجاد شد','success');
         return back();
     }
+
+    public function admins_delete(User $admin)
+    {
+        $admin->delete();
+        alert_message('مدیر مورد نظر با موفقیت حذف شد','success');
+        return back();
+
+    }
 }
