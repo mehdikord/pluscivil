@@ -102,7 +102,7 @@
                             <li class="nav-item"><a href="#" class="nav-link">خدمات <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
 
-                                    @foreach($main_services as $main_service)
+                                    @foreach(main_services() as $main_service)
                                     <li class="nav-item"><a href="{{route('front.service.show',['service'=>$main_service->slug])}}" class="nav-link">{{$main_service->name}}</a></li>
                                     @endforeach
                                 </ul>

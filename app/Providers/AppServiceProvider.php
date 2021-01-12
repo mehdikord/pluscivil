@@ -25,6 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('main_services',Service::where('is_public',1)->whereNull('parent_id')->get());
+//        View::share('main_services',);
     }
 }

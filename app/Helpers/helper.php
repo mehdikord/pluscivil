@@ -39,3 +39,6 @@ function get_ip()
     return $ip;
 
 }
+function main_services(){
+    return \App\Service::where('is_public',1)->whereNull('parent_id')->get();
+}

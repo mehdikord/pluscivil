@@ -48,7 +48,7 @@
             </div>
 
             <div class="row">
-                @foreach($main_services as $main_service)
+                @foreach(main_services() as $main_service)
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <a href="{{route('front.service.show',['service'=>$main_service->slug])}}">
                     <div class="single-features-box">
